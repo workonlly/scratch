@@ -1,0 +1,23 @@
+@import "tailwindcss";
+body{
+    background-color: #4aa9cf;
+}
+.sphere {
+    width: 600px;
+    height: 600px;
+    border-radius: 500px;
+    background: rgba(255, 255, 255, 0.1);     /* translucent white */
+    backdrop-filter: blur(16px);              /* frosted glass effect */
+    -webkit-backdrop-filter: blur(16px);      /* for Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);/* soft inner border */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* depth */
+    text-align: center;
+    position: relative;
+    transform: rotate(90deg);                 /* your original rotation */
+    padding: 20px;
+    color: white;
+    transform: rotate(110deg);
+  }
+  
+
+  

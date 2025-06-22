@@ -1,0 +1,119 @@
+@import "tailwindcss";
+.button-1{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+}
+.button-2{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    -webkit-mask-image: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask-image: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    background-repeat: no-repeat;
+  
+    /* Load-in animation */
+    -webkit-animation: ani2 0.7s steps(22) forwards;
+    animation: ani2 0.7s steps(22) forwards;
+
+    background-color:#0a0a0a;
+}
+.button-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background: transparent;
+ }
+.button-1::before{
+    content: "";
+    width: 100%;
+    height: 1.55em;
+    position: absolute;
+    left: 0;
+    bottom: -1.55em;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0) 80%
+    );
+    opacity: 0;
+    transition: all 0.65s;
+    pointer-events: none;
+    z-index: -1;
+}
+
+ .g-hov:hover .button-1::before{
+    opacity: 1;
+}
+.g-hov:hover .button-1{
+   border: 1px solid black;
+    transform: translateY(-0.50em);
+}
+
+
+.g-hov:hover .button-2{
+    animation: ani 0.7s steps(22) forwards;
+    transform: translateY(-0.50em);
+   
+}
+
+ .g-hov:hover .button-3{
+    color:rgb(0, 0, 0);
+    transform: translateY(-0.50em);
+ }
+
+  
+  /* Hover animation forward */
+  @keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
+  
+  /* Reverse animation on load */
+  @keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  
+  .g-hov:hover {
+    animation: yo 0.7s ease-in-out 0.3s infinite;
+  }
+  
+  @keyframes yo {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
