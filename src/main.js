@@ -45,7 +45,20 @@ async function fetchAndRenderSlides() {
         disableOnInteraction: false,
       },
       speed: 2000, // A longer duration works better with a linear transition
-      slidesPerView: 3,
+              breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          1440: {
+            slidesPerView: 4,
+          },
+        },
       spaceBetween: 20,
       allowTouchMove: false,
     });
