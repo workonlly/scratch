@@ -2,22 +2,65 @@
 body{
     background-color: #4aa9cf;
 }
-.sphere {
-    width: 600px;
-    height: 600px;
-    border-radius: 500px;
-    background: rgba(255, 255, 255, 0.1);     /* translucent white */
-    backdrop-filter: blur(16px);              /* frosted glass effect */
-    -webkit-backdrop-filter: blur(16px);      /* for Safari */
-    border: 1px solid rgba(255, 255, 255, 0.2);/* soft inner border */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* depth */
-    text-align: center;
-    position: relative;
-    transform: rotate(90deg);                 /* your original rotation */
-    padding: 20px;
+/* The main button styling */
+.masked-button {
+    position: relative; /* Required for positioning the ::before element */
+    padding: 16px 32px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+    /* Initial State (from your video) */
     color: white;
-    transform: rotate(110deg);
-  }
-  
+    background-color: black;
+    
+    border: 2px solid black;
+    border-radius: 12px;
+    text-decoration: none;
+    overflow: hidden; /* Crucial for containing the effect */
+    cursor: pointer;
+    
+    /* Smooth transition for the text color */
+    transition: color 0.5s ease-in-out;
+    z-index: 1; /* Ensures text is above the effect layer */
+}
 
-  
+/* The hover-effect layer */
+.masked-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* The background that will be revealed on hover */
+    background-color: white;
+    
+    /* Position this layer behind the text */
+    z-index: -1; 
+    
+    /* --- The Masking Effect --- */
+    /* You can use your own SVG or PNG for the mask shape */
+    mask-image: url('https://i.imgur.com/O6pSf2p.png'); 
+    
+    /* Initially, the mask is scaled to zero, so it's invisible */
+    mask-size: 0% 0%; 
+    mask-position: center;
+    mask-repeat: no-repeat;
+    
+    /* Animate the growth of the mask */
+    transition: mask-size 0.5s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+/* --- The Hover State --- */
+
+.masked-button:hover::before {
+    /* On hover, grow the mask much larger than the button to reveal the whole background */
+    mask-size: 300% 300%; 
+}
+
+.masked-button:hover {
+    /* Change the text color to match the new background */
+    color: black; 
+}
