@@ -11,12 +11,12 @@
     <title>vercel</title>
 
 </head>
-<body>
+<body class=" w-[99.5%] overflow-x-hidden pl-2">
   <div class=" relative left-0 right-0 ">
  <!-- Responsive Navbar Wrapper -->
 <div class="sticky top-12 w-full z-50 bg-transparent" x-data="{ open: false }">
   <!-- Nav Container -->
-  <div class="flex justify-between items-center  h-16 px-4 bg-white/30 backdrop-blur-md rounded-lg shadow-lg w-full md:w-[45%] md:left-[25%] absolute z-50">
+  <div class="flex justify-between items-center  h-16 px-4 bg-white/30 backdrop-blur-md rounded-lg shadow-lg w-full md:w-[45%] md:left-[26%] absolute z-50">
     <!-- Desktop Menu -->
     <div class="hidden md:flex flex-row md:justify-between ">
       <a href="/" class="text-center font-medium py-2 px-4 rounded-md hover:bg-white/70">Home</a>
@@ -53,7 +53,7 @@
 
 
 <!-- Hero Section -->
-<div class="h-auto md:h-[110vh] m-2 rounded-xl pt-[80px] md:pt-[2%] gradient-background shadow-lg relative overflow-hidden">
+<div class="h-auto  md:h-[110vh] rounded-xl pt-[80px] md:pt-[2%] gradient-background shadow-lg relative overflow-hidden">
   <div class="folder hidden md:block  "></div>
 
   <!-- Header Section -->
@@ -168,19 +168,25 @@
             <a href="#" class="text-black p-2 hover:text-white hover:bg-black hover:rounded-full font-medium">Learn more →</a>
           </div>
         </div>
-        <div class="relative h-[60vh] rounded-lg m-[20px] p-8 backdrop-blur-md shadow-lg flex flex-col items-center justify-center gap-6 text-center text-black bg-white/70 hover:border-2 hover:border-black ">
-          <h2 class="text-5xl font-bold">Offering You A More</h2>
-        
-          <p class="w-[70%] text-xl leading-relaxed">
-            We empower businesses to thrive in the digital landscape by delivering comprehensive solutions, from virtual marketing to cutting-edge lead generation services.
-          </p>
-          <div class="relative right-25 g-hov z-30">
-            <div class="button-1"></div>
-            <div class="button-2"></div>
-            <div class="button-3 flex flex-row justify-center items-center text-base font-medium">
-              BOOK A CONSULTATION
-            </div>
-        </div>
+        <div class="relative h-auto md:h-[60vh] rounded-lg m-4 md:m-[20px] p-6 md:p-8 backdrop-blur-md shadow-lg flex flex-col items-center justify-center gap-6 text-center text-black bg-white/70 hover:border-2 hover:border-black overflow-hidden">
+  <h2 class="text-3xl md:text-5xl font-bold">Offering You A More</h2>
+
+  <p class="w-full max-w-xl text-base md:text-xl leading-relaxed px-2">
+    We empower businesses to thrive in the digital landscape by delivering comprehensive solutions, from virtual marketing to cutting-edge lead generation services.
+  </p>
+<div class="w-full flex justify-center mr-[20%]">
+  <div class="relative g-hov">
+    <!-- Decorative layers (optional, style as needed) -->
+    <div class="button-1 absolute inset-0 rounded-full"></div>
+    <div class="button-2 absolute inset-0 rounded-full"></div>
+
+    <!-- The actual button -->
+    <div class="button-3 relative z-10 flex justify-center items-center text-white text-sm md:text-base font-medium px-6 py-3 whitespace-nowrap bg-black rounded-full shadow-lg">
+      BOOK A CONSULTATION
+    </div>
+  </div>
+</div>
+
         </div>
       </section>
       <!-- section end here       -->
