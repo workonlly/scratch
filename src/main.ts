@@ -2,6 +2,7 @@
 import { renderHeader } from './header';
 import { Footer } from './footer';
 import { email } from './email';
+import Services from './links';
 
 
 const mount = document.getElementById('app');
@@ -26,6 +27,10 @@ if (emai) {
 }else{
     console.log("header not loading")
 }
+
+const servo= document.getElementById("ser")
+if(servo){
+ servo.innerHTML=Services()}
 
 
 window.addEventListener('DOMContentLoaded', () => {

@@ -6,13 +6,21 @@
   <title>LaCleo Digital - Digital Marketing Services</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/src/style.css">
+   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body class="bg-white text-gray-800">
 
+  <div class=" relative left-0 right-0 ">
+<div class="sticky top-0 w-full z-50 bg-transparent " x-data="{ open: false }">
+<div id="app"></div>
+</div>
+  
+
+
   <!-- Header -->
-  <header class="text-center py-8 space-y-2 bg-blue-50">
-    <h2 class="text-3xl font-bold">Digital Marketing</h2>
-    <h6 class="text-lg text-gray-500">Services &nbsp;•&nbsp; Digital Marketing</h6>
+  <header class="text-center py-20 space-y-2 bg-blue-50">
+    <h2 class="text-3xl font-bold">Blog</h2>
+    <h6 class="text-lg text-gray-500">•&nbsp; Blog</h6>
   </header>
 
   <!-- Intro -->
@@ -27,46 +35,16 @@
   <section class="bg-gray-100 py-10 px-6">
                   <h3 class="text-center text-xl font-semibold mb-5">Trusted by some of the biggest brands</h3>
                   <div class="flex justify-center items-center gap-4 flex-wrap wave-text">
-                    <span class="h-16 w-28 bg-gray-300 rounded"></span>
-                    <span class="h-16 w-28 bg-gray-300 rounded"></span>
-                    <span class="h-16 w-28 bg-gray-300 rounded"></span>
-                    <span class="h-16 w-28 bg-gray-300 rounded"></span>
-                    <span class="h-16 w-28 bg-gray-300 rounded"></span>
-                    <span class="h-16 w-28 bg-gray-300 rounded"></span>
+                    <span class=" w-28 bg-gray-300  flex justify-center items-center"> <img src="/img/abstract-logo-white.png" alt=""></span>
+                    <span class=" w-28 bg-gray-300  flex justify-center items-center"> <img src="/img/cglobal-logo-white.png" alt=""></span>
+                    <span class=" w-28 bg-gray-300  flex justify-center items-center"> <img src="/img/digitalbox-logo-white.png" alt=""></span>
+                    <span class=" w-28 bg-gray-300  flex justify-center items-center"> <img src="/img/edureka-white-logo.png" alt=""></span>
+                    <span class=" w-28 bg-gray-300  flex justify-center items-center"> <img src="/img/lambdatest-white-logo.png" alt=""></span>
+                    <span class=" w-28 bg-gray-300  flex justify-center items-center"> <img src="/img/livspace-white-logo-400x88.png" alt=""></span>
                   </div>
                 </section>
   <!-- Services -->
-  <section class="px-6 py-12 max-w-5xl mx-auto space-y-10 leading-relaxed text-justify">
 
-    <section>
-      <h3 class="text-xl font-bold">Link Building</h3>
-      <p>
-        Our team builds high-quality backlinks to boost your website's authority and search engine rankings, resulting in increased traffic and better credibility.
-      </p>
-    </section>
-
-    <section>
-      <h3 class="text-xl font-bold">Email Marketing</h3>
-      <p>
-        LaCleo creates personalized campaigns that deliver value to your audience's inbox, driving higher open rates, conversions, and long-term engagement.
-      </p>
-    </section>
-
-    <section>
-      <h3 class="text-xl font-bold">Social Media Marketing</h3>
-      <p>
-        We develop powerful strategies to amplify your brand presence across social platforms, engaging users through creative content and targeted campaigns.
-      </p>
-    </section>
-
-    <section>
-      <h3 class="text-xl font-bold">Affiliate Marketing</h3>
-      <p>
-        Our affiliate programs connect you with trusted partners who promote your products and generate performance-based revenue through scalable campaigns.
-      </p>
-    </section>
-
-  </section>
 
   <!-- Why Choose Us -->
   <section class="bg-gray-50 px-6 py-12 max-w-5xl mx-auto space-y-6">
@@ -79,6 +57,7 @@
       <li><strong>Proven Results:</strong> A track record of successful projects and satisfied clients.</li>
     </ul>
   </section>
+  
 
   <!-- CTA / Contact -->
   <section class="bg-blue-50 py-12 px-6">
@@ -102,7 +81,11 @@
         </div>
       </div>
     </div>
+    
+    
   </section>
-
+  </div>
+  <div id="fe"></div>
+ <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
