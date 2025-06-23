@@ -17,8 +17,8 @@
     border-radius: 20px;
     width: 200px;
     height: 50px;
-    -webkit-mask-image: url("/nature-sprite.png");
-    mask-image: url("/nature-sprite.png");
+    -webkit-mask-image: url("./nature-sprite.png");
+    mask-image: url("./nature-sprite.png");
     -webkit-mask-size: 2300% 100%;
     mask-size: 2300% 100%;
     background-repeat: no-repeat;
