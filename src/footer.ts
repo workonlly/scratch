@@ -1,43 +1,43 @@
 export function Footer(): string{
     return`
-     <footer class="animated-bg text-[#003366] py-12 mt-16 ">
+     <footer class="bg-black text-white py-12 w-screen absolute  ">
   <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-wrap justify-between gap-y-10  " >
     
     <!-- Column 1 -->
     <div class="space-y-2 min-w-[150px]">
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Home</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Services</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Case Studies</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Blog</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Contact Us</p>
+      <p class="text-base  font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Home</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Services</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Case Studies</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Blog</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Contact Us</p>
     </div>
 
     <!-- Column 2 -->
     <div class="space-y-2 min-w-[200px]">
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Digital Marketing</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Digital Experience Testing</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Data Research</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Integration Engineering</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">E-Commerce Consultancy</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Customer Support</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Digital Marketing</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Digital Experience Testing</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Data Research</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Integration Engineering</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">E-Commerce Consultancy</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Customer Support</p>
     </div>
 
     <!-- Column 3 -->
     <div class="space-y-2 min-w-[220px]">
-      <p  class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Social Media Marketing</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Market Research</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Link Building</p>
-      <p  class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Social Media Marketing</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">B2B Lead Generation</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Cross Browser Testing</p>
+      <p  class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Social Media Marketing</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Market Research</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Link Building</p>
+      <p  class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Social Media Marketing</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">B2B Lead Generation</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Cross Browser Testing</p>
     </div>
 
     <!-- Column 4 -->
     <div class="space-y-2 min-w-[200px] text-right md:text-left">
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Book A Consultation</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Privacy Policy</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">Terms of Service</p>
-      <p class="text-sm text-gray-500 mt-4" class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Book A Consultation</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Privacy Policy</p>
+      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Terms of Service</p>
+      <p class="text-sm text-white mt-4" class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">
         Email: <a href="mailto:info@lacleodigital.com" class="underline">info@lacleodigital.com</a><br>
         WhatsApp: <a href="https://wa.me/917428149253" class="underline">+91-7428149253</a>
       </p>
@@ -53,7 +53,7 @@ export function Footer(): string{
 
   </div>
 
-  <div class="mt-12 text-center text-sm text-gray-400">
+  <div class="mt-12 text-center text-sm text-white">
     &copy; La Cleo Digital Private Limited | All rights reserved.
   </div>
 </footer>

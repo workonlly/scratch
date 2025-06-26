@@ -1,4 +1,6 @@
 @import "tailwindcss";
+
+
 .button-1{
     display: inline-block;
     position: absolute;
@@ -27,7 +29,7 @@
     -webkit-animation: ani2 0.7s steps(22) forwards;
     animation: ani2 0.7s steps(22) forwards;
 
-    background-color:#0a0a0a;
+    background-color:#38b000;
 }
 .button-3{
     position: absolute;
@@ -60,7 +62,7 @@
     opacity: 1;
 }
 .g-hov:hover .button-1{
-   border: 1px solid black;
+  
     transform: translateY(-0.50em);
 }
 
@@ -72,8 +74,11 @@
 }
 
  .g-hov:hover .button-3{
-    color:rgb(0, 0, 0);
+   background-color:black;
+    color:rgb(255, 255, 255);
     transform: translateY(-0.50em);
+    transition: 2s;
+    border-radius:20px
  }
 
   
@@ -117,3 +122,51 @@
     }
   }
   
+
+
+  .dropdown-container {
+  position: relative;
+  align-content: center;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 10;
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 200px;
+}
+
+/* Dropdown item links */
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown-container:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Positioning nested dropdowns */
+.dropdown-menu .dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-container .dropdown-menu {
+  top: 0;
+  left: 100%;
+}
