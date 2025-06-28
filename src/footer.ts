@@ -4,33 +4,15 @@ export function Footer(): string{
   <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-wrap justify-between gap-y-10  " >
     
     <!-- Column 1 -->
-    <div class="space-y-2 min-w-[150px]">
-      <p class="text-base  font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Home</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Services</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Case Studies</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Blog</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Contact Us</p>
+    <div class="space-y-2 min-w-[150px] flex flex-col">
+      <a class=" nav-lin text-base  font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black ">Home</a>
+      <a class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Services</a>
+      <a class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Case Studies</a>
+      <a class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Blog</a>
+      <a class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Contact Us</a>
     </div>
 
-    <!-- Column 2 -->
-    <div class="space-y-2 min-w-[200px]">
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Digital Marketing</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Digital Experience Testing</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Data Research</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Integration Engineering</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">E-Commerce Consultancy</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white hover:text-black">Customer Support</p>
-    </div>
-
-    <!-- Column 3 -->
-    <div class="space-y-2 min-w-[220px]">
-      <p  class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Social Media Marketing</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Market Research</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Link Building</p>
-      <p  class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Social Media Marketing</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">B2B Lead Generation</p>
-      <p class="text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Cross Browser Testing</p>
-    </div>
+    <div id="import2"></div>
 
     <!-- Column 4 -->
     <div class="space-y-2 min-w-[200px] text-right md:text-left">

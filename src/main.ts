@@ -151,3 +151,22 @@ if (secondid){
   }
 }
 
+
+const currentPath = window.location.pathname;
+
+const links = document.querySelectorAll('.nav-link'); // for <a>
+const linko = document.querySelectorAll('.nav-lin');  // for <p>
+
+links.forEach(link => {
+  if (link.getAttribute('href') === currentPath) {
+    link.classList.add('bg-black', 'text-white','ease-in');
+  }
+});
+
+linko.forEach(link => {
+  const text = link.textContent?.trim().toLowerCase();
+  const expectedPath = text === 'home' ? '/' : `/${text}`;
+  if (expectedPath === currentPath) {
+    link.classList.add('bg-white', 'text-black');
+  }
+});
