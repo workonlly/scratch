@@ -23,14 +23,19 @@ async function fetchAndRenderSlides() {
       const name = row['Name'] || 'Anonymous';
       const feedback = row['Region'] || 'No feedback';
       const rating = row['Review'] || 'N/A';
+      function generateRandomStarsEmoji(min = 3, max = 5){
+     const starCount = Math.floor(Math.random() * (max - min + 1)) + min;
+    return '⭐'.repeat(starCount);
+       }
+
 
 
       const slide = document.createElement('div');
       slide.className = 'swiper-slide';
       slide.innerHTML = `
-        <div style="padding: 20px;  border-radius: 12px;  ">
-        <div style="border-radius:10px; height:80px;width:80px; ">   <img src="/profi.png" alt="yello"></div>
-          <h3>${name}</h3>
+        <div style="padding: 20px;  border-radius: 12px; text-align:left;  ">
+        <div style="border-radius:10px; height:80px;width:80px; "> ${generateRandomStarsEmoji()}  </div>
+          <p>${name}</p>
           <p><strong>Region:</strong> ${feedback}</p>
           <p><strong>Review:</strong> ${rating}</p>
         </div>

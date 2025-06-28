@@ -61,21 +61,3 @@
 
 
 
-.swiper {
-  width: 100%;
-}
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  font-size: 20px;
-  color: rgb(2, 2, 2);
-
-  border-radius: 12px;
-}
-
-.swiper-wrapper {
-  transition-timing-function: linear !important;
-}

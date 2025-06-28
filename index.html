@@ -8,14 +8,27 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/button.css">
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="/global.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <title>vercel</title>
-
+<script type="module" src="/src/gsap.ts"></script>
 </head>
 <body class="  overflow-x-hidden ">
 
-  <div class=" sticky top-0 z-50 bg-white ">
+  <div
+  id="loader"
+  class="w-screen h-screen flex justify-center items-center fixed top-0 left-0 bg-transparent z-50"
+>
+  <div
+    id="loader-box"
+    class="flex w-[97vw] h-[95vh] justify-center items-center bg-white/30 backdrop-blur-sm absolute text-4xl font-bold shadow-xl animated-gradient-text text-[70px]"
+  >
+    Lacleo Digital
+  </div>
+</div>
+
+  <div class=" sticky top-0 z-50 bg-white m-auto rounded-sm opacity-0 content-center w-[97%] " id="main-content" >
    <div id="app"></div>
    </div>
    
@@ -23,7 +36,7 @@
   <!-- Main Content Section -->
   <div class="flex flex-col md:flex-row items-center justify-between gap-6 px-4 mt-20 ">
     <!-- Text Left -->
-    <div class="flex flex-col gap-4 md:w-1/2 z-30 ">
+    <div class="flex flex-col gap-4 md:w-1/2 z-30  ml-[30px]" id="step1">
       <h1 class="text-4xl md:text-6xl font-bold text-black wave-text">
         <span>(</span>
         <span>B</span>
@@ -35,33 +48,40 @@
       <h2 class="text-4xl md:text-6xl font-bold text-black typewriter">Lead Generation</h2>
       <h2 class="text-4xl md:text-6xl font-bold text-black typewriter">Specialist</h2>
       <p class="text-2xl md:text-4xl font-semibold text-[#38b000]">For Sales Lead</p>
-      <p class="text-base md:text-xl max-w-[90vw] md:max-w-[50vw] text-black">
+      <p class="text-base md:text-xl max-w-[90vw] md:max-w-[50vw] text-black" id="step11">
         The strategic virtual marketing campaigns to in-depth records research and analysis. Our dedicated team is using your business ahead. Lacleo Digital is here to provide exceptional customer guide and deliver innovative strategies tailored for your unique needs.
       </p>
     </div>
 
     <!-- Video Right -->
-    <div class="w-full md:w-1/2 flex justify-center z-30">
-      <video src="/Untitled design.mp4" autoplay loop muted playsinline class="rounded-lg w-full max-w-[500px]"></video>
+    <div class="w-full md:w-1/2 flex justify-center z-30" id="step2">
+      <video src="/Project Proposal Presentation.mp4" autoplay loop muted playsinline class="rounded-lg w-full max-w-[500px]"></video>
     </div>
 
-    <!-- Decorative Sphere -->
-    <div class="sphere hidden md:block"></div>
+  
+  <div class="flex w-[100%] h-[100%] flex-row justify-end right-10 top-10  bg-transparent  animated-gradient-text absolute  gap-1 ">
+   <div class="w-[2%] h-[60%]  border-2  rounded-full  border-black" id="slide-1" ></div>
+   <div class="w-[2%] h-[70%] border-2  rounded-full border-black"  id="slide-2"></div>
+   <div class="w-[2%] h-[80%] border-2  rounded-full border-black"  id="slide-3"></div>
   </div>
-</div>
+   
+  </div>
+
+
+
 
        <!-- section -->
-         <div id="ser"></div>
+         <div id="ser" class="fade-in"></div>
       <!-- section end here       -->
       
 
       <!-- Why Work With Us Section -->
       <section class="px-10 my-20 py-16 bg-white/70 backdrop-blur-md shadow-lg rounded-lg">
-        <div class="text-center mb-12">
+        <div class="text-center mb-12" id="text-1">
           <h2 class="text-4xl font-bold text-black">Why Work With Us?</h2>
           <p class="text-lg text-black mt-2">We are committed to your success and growth.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="text-2">
           <!-- Feature 1: Expert Team -->
           <div class="p-6 flex flex-col items-center text-center gap-4">
             <div class="rounded-full h-20 w-20 bg-black flex items-center justify-center">
@@ -97,34 +117,33 @@
 
         <!-- 2nd compartment -->
         <div class=" py-16 px-4 flex flex-col items-center gap-8 rounded-t-[100px] shadow-xl/30 overflow-hidden z-0">
-          <div class="text-center">
+          <div class="text-center" id="text-3">
               <h2 class="text-3xl font-bold text-black">Some Of Our Case Studies</h2>
               <p class="text-lg text-black mt-2">Divе Dееpеr Into Our Cliеnt Work</p>
           </div>
       
           <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl">
-              <div class="h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105">
+              <div class="  text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105">
                   <div class="flex flex-col justify-center items-center p-[20px]">
                       <img src="/edu.png" alt="edureka" class="h-[30vh]  top-0">
                       <div class="text-black" >By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
                   </div>
               </div>
       
-              <div class="h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105">
-                  <div class="flex flex-col justify-center items-center p-[20px]">
+              <div class="  text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105">
+                  <div class="flex flex-col justify-center items-center p-[20px] ">
                       <img src="/livespace.pdf-removebg-preview.png" alt="Live Space" class=" h-[30vh]">
                       <div class="text-black">By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
                   </div>
               </div>
       
-              <div class="h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold z-20 hover:border-2 hover:border-black hover:scale-105">
+              <div class="  text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold z-20 hover:border-2 hover:border-black hover:scale-105">
                   <div class="flex flex-col justify-center items-center p-[20px]">
                       <div class=" h-[30vh] " ><img src="/lambda.png" alt="Lambda Test" class=" h-[20vh] " ></div>
                       <div class="text-black">By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
                   </div>
               </div>
       
-              <div class="sphere z-10 md:z-10 sm:z-10 xl:z-10"></div>
           </div>
       </div>
 

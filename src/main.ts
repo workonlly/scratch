@@ -4,8 +4,8 @@ import { Footer } from './footer';
 import { email } from './email';
 import Services from './links';
 import { Wave } from './wavy';
-import { service } from './services';
-import {servicess} from './servicess';
+import { maindata } from './maindata';
+import { maindata2 } from './maindata2';
 import { liblog } from './blog';
 import { login } from './login';
 const mount = document.getElementById('app');
@@ -78,18 +78,18 @@ const container = document.getElementById('service-contain');
 const noly = document.getElementById('text-noly');
 
 if (container && noly && !isNaN(id)) {
-  const serviceee = service.find((item) => item.id === id)||servicess.find((item)=> item.id==id);
+  const serviceee = maindata.find((item) => item.id === id)||maindata2.find((item)=> item.sid==id);
 
   if (serviceee) {
     container.innerHTML = `
       <header class="text-center py-10 space-y-2 bg-[#4361ee]">
-        <h2 class="text-3xl font-bold text-white">${serviceee.heading1}</h2>
-        <h6 class="text-lg  text-white">•&nbsp;${serviceee.subHeading1}</h6>
+        <h2 class="text-3xl font-bold text-white">${serviceee.promo}</h2>
+        <h6 class="text-lg  text-white">•&nbsp;${serviceee.keywords}</h6>
       </header>
 
       <section class="px-6 py-12 max-w-5xl mx-auto space-y-4">
-        <h3 class="text-2xl font-semibold text-center">${serviceee.heading2}</h3>
-        <p class="text-center">${serviceee.subHeading2}</p>
+        <h3 class="text-2xl font-semibold text-center">${serviceee.secheading}</h3>
+        <p class="text-center">${serviceee.secpara}</p>
       </section>
     `;
 
@@ -127,7 +127,7 @@ const secondid=document.getElementById("second-id")
 
 if (secondid){
 
-  const flexrow=servicess.filter((item)=> item.sid==id);
+  const flexrow=maindata2.filter((item)=> item.id==id);
 
   if(flexrow){
 
@@ -135,13 +135,13 @@ if (secondid){
 <div class="bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full">
       <div class="rounded-full h-14 w-14 bg-black"></div>
 
-      <h3 class="text-xl font-semibold text-black"> ${items.heading1}</h3>
+      <h3 class="text-xl font-semibold text-black"> ${items.promo}</h3>
 
       <p class="text-sm px-2 text-black">
-        Expand your social presence and engage your audience with impactful content and strategy.
+        ${items.heading}
       </p>
 
-      <a href="#" class="text-black px-3 py-1 hover:text-white hover:bg-black rounded-full text-sm font-medium">
+      <a href="../show.html?id=${items.sid}" class="text-black px-3 py-1 hover:text-white hover:bg-black rounded-full text-sm font-medium">
         Learn more →
       </a>
     </div>

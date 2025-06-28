@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="global.css">
-    <title>Document</title>
-</head>
-<body class="relative h-screen w-screen">
-  <div class="bg-black h-full w-full flex flex-row gap-2 p-2">
-
+export const loginpage:string=
+ `
+     <div class="bg-black h-full w-full flex flex-row gap-1 p-2">
     <!-- Side Panel -->
     <div class="w-[30%] h-full bg-white rounded-md overflow-y-auto p-4">
-      <div class="text-black">Side content goes here</div>
+      <div class="text-black flex flex-col justify-left  overflow-auto">
+       <a  href="" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">home</a>
+        <a  href="" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">Case Studies</a>
+    <a  href="" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">blog</a>
+      <a  href="" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">About us</a>
+    <a  href="" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">contact us</a>
+        <div id="import2"></div>
+        <div id="import1"></div>
+      </div>
     </div>
 
     <!-- Main Panel -->
@@ -60,7 +60,5 @@
       </div>
     </div>
   </div>
-</body>
 
-
-</html>
+    `

@@ -4,11 +4,11 @@
   font-size: 3rem;
   font-weight: bold;
   color: white;
-  background: linear-gradient(270deg, #38b000, #4361ee, #ffffff);
+  background: linear-gradient(135deg, #3f3f3f, #000000);
   background-size: 400% 400%;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-  animation: moveGradient 20s ease infinite; 
+  animation: moveGradient 4s ease-out infinite; 
 }
 
 @keyframes moveGradient {
@@ -69,4 +69,9 @@
 .dropdown-menu .dropdown-container .dropdown-menu {
   top: 0;
   left: 100%;
+}
+
+#loader {
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
