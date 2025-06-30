@@ -1,1 +1,0 @@
-import { mdata } from "./maindatakeywords";

@@ -1,276 +1,302 @@
 type mdata={
     id:number;
-    sid:number;
     title:string;
-    metakeywords:Array<string>;
+    metakeywords:(string|number)[];
     description:string;
     
 }
 export const mdata:mdata[]=[
 
     {
-            id:0,
-            sid:11,
+            
+            id:11,
             title:"tring",
-            metakeywords:["tring"],
+            metakeywords:["tring","dsfs","sdfsdf",79,58],
             description:"tring",
     },
     {
-            id:0,
-            sid:12,
-            title:"tring",
-             metakeywords:["tring"],
-            description:"tring",
-    },
-    {
-            id:0,
-            sid:13,
+            
+            id:12,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:14,
+            
+            id:13,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:15,
+            
+            id:14,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:16,
+            
+            id:15,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:17,
+            
+            id:16,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:18,
+            
+            id:17,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:19,
+            
+            id:18,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:20,
+            
+            id:19,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:21,
+            
+            id:20,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:22,
+            
+            id:21,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:23,
+            
+            id:22,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:24,
+            
+            id:23,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:25,
+            
+            id:24,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:26,
+            
+            id:25,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:27,
+            
+            id:26,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:28,
+            
+            id:27,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:29,
+            
+            id:28,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:30,
+            
+            id:29,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:31,
+            
+            id:30,
+            title:"tring",
+             metakeywords:["tring"],
+            description:"tring",
+    },
+    {
+            
+            id:31,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
 
     {
-            id:0,
-            sid:32,
+            
+            id:32,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:33,
+            
+            id:33,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:34,
+            
+            id:34,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:35,
+            
+            id:35,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:36,
+            
+            id:36,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:37,
+            
+            id:37,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:38,
+            
+            id:38,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:39,
+            
+            id:39,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:0,
-            sid:40,
+            
+            id:40,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
             id:1,
-            sid:400,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
             id:2,
-            sid:400,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
             id:3,
-            sid:490,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
             id:4,
-            sid:409,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
             id:5,
-            sid:400,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
             id:6,
-            sid:400,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
             id:7,
-            sid:400,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",
     },
     {
-            id:8,
-            sid:400,
+            id:111,
+         
+            title:"tring",
+             metakeywords:["tring"],
+            description:"tring",
+    },
+    {
+            id:112,
+          
+            title:"tring",
+             metakeywords:["tring"],
+            description:"tring",
+    },
+    {
+            id:113,
+         
+            title:"tring",
+             metakeywords:["tring"],
+            description:"tring",
+    },
+    {
+            id:114,
+       
+            title:"tring",
+             metakeywords:["tring"],
+            description:"tring",
+    },
+    {
+            id:115,
+ 
+            title:"tring",
+             metakeywords:["tring"],
+            description:"tring",
+    },
+    {
+            id:116,
             title:"tring",
              metakeywords:["tring"],
             description:"tring",

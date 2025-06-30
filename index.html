@@ -2,64 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="This is a web page about AI-powered tools.">
     <meta name="keywords" content="AI, tools, technology, innovation">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/button.css">
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="/src/style.css">
     <link rel="stylesheet" href="/global.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <title>vercel</title>
 <script type="module" src="/src/gsap.ts"></script>
 </head>
-<body class="  overflow-x-hidden ">
-
+<body class="bg-white overflow-x-hidden sm:overflow-x-hidden content-center">
   <div
-  id="loader"
-  class="w-screen h-screen flex justify-center items-center fixed top-0 left-0 bg-transparent z-50"
->
-  <div
-    id="loader-box"
-    class="flex w-[97vw] h-[95vh] justify-center items-center bg-white/30 backdrop-blur-sm absolute text-4xl font-bold shadow-xl animated-gradient-text text-[70px]"
+    id="loader"
+    class="fixed inset-0 w-screen h-screen flex justify-center items-center bg-transparent z-50"
   >
-    Lacleo Digital
+    <div
+      id="loader-box"
+      class="flex w-screen h-screen justify-center items-center bg-white/30 backdrop-blur-sm absolute text-4xl font-bold shadow-xl animated-gradient-text text-3xl sm:text-5xl md:text-6xl"
+    >
+      Lacleo Digital
+    </div>
   </div>
-</div>
-
-  <div class=" sticky top-0 z-50 bg-white m-auto rounded-sm opacity-0 content-center w-[97%] " id="main-content" >
-   <div id="app"></div>
-   </div>
+  <div class="sticky top-0 z-50 bg-white m-auto rounded-sm opacity-0 content-center w-full max-w-full" id="main-content">
+    <div id="app"></div>
+  </div>
    
 
   <!-- Main Content Section -->
-  <div class="flex flex-col md:flex-row items-center justify-between gap-6 px-4 mt-20 ">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-6 px-4 mt-20 w-full max-w-full">
     <!-- Text Left -->
-    <div class="flex flex-col gap-4 md:w-1/2 z-30  ml-[30px]" id="step1">
+    <div class="flex flex-col gap-4 md:w-1/2 z-30 ml-0 md:ml-[30px]" id="step1">
       <h1 class="text-4xl md:text-6xl font-bold text-black wave-text">
         <span>(</span>
         <span>B</span>
         <span>2</span>
-        <span>b</span>
+        <span>B</span>
         <span>)</span>
         
         </h1>
       <h2 class="text-4xl md:text-6xl font-bold text-black typewriter">Lead Generation</h2>
       <h2 class="text-4xl md:text-6xl font-bold text-black typewriter">Specialist</h2>
       <p class="text-2xl md:text-4xl font-semibold text-[#38b000]">For Sales Lead</p>
-      <p class="text-base md:text-xl max-w-[90vw] md:max-w-[50vw] text-black" id="step11">
+      <p class="text-base md:text-xl max-w-full md:max-w-[50vw] text-black" id="step11">
         The strategic virtual marketing campaigns to in-depth records research and analysis. Our dedicated team is using your business ahead. Lacleo Digital is here to provide exceptional customer guide and deliver innovative strategies tailored for your unique needs.
       </p>
     </div>
 
     <!-- Video Right -->
     <div class="w-full md:w-1/2 flex justify-center z-30" id="step2">
-      <video src="/Project Proposal Presentation.mp4" autoplay loop muted playsinline class="rounded-lg w-full max-w-[500px]"></video>
+      <video src="/Project Proposal Presentation.mp4" autoplay loop muted playsinline class="rounded-lg w-full max-w-xs sm:max-w-md md:max-w-[500px] aspect-video"></video>
     </div>
 
   
-  <div class="flex w-[100%] h-[100%] flex-row justify-end right-10 top-10  bg-transparent  animated-gradient-text absolute  gap-1 ">
+  <div class="flex w-[100%] h-[100%] flex-row justify-end right-10 top-10  bg-transparent  animated-gradient-text absolute  gap-1 z-10 hidden md:block lg:block"  >
    <div class="w-[2%] h-[60%]  border-2  rounded-full  border-black" id="slide-1" ></div>
    <div class="w-[2%] h-[70%] border-2  rounded-full border-black"  id="slide-2"></div>
    <div class="w-[2%] h-[80%] border-2  rounded-full border-black"  id="slide-3"></div>
@@ -71,46 +69,46 @@
 
 
        <!-- section -->
-         <div id="ser" class="fade-in"></div>
+         <div id="ser" class="fade-in mt-[40vh] mx-auto flex justify-center"></div>
       <!-- section end here       -->
       
 
       <!-- Why Work With Us Section -->
-      <section class="px-10 my-20 py-16 bg-white/70 backdrop-blur-md shadow-lg rounded-lg">
-        <div class="text-center mb-12" id="text-1">
-          <h2 class="text-4xl font-bold text-black">Why Work With Us?</h2>
-          <p class="text-lg text-black mt-2">We are committed to your success and growth.</p>
+      <section class="px-4 sm:px-6 md:px-10 my-10 md:my-20 py-10 md:py-16 bg-white/70 backdrop-blur-md shadow-lg rounded-lg max-w-6xl mx-auto">
+        <div class="text-center mb-8 md:mb-12" id="text-1">
+          <h2 class="text-3xl md:text-4xl font-bold text-black">Why Work With Us?</h2>
+          <p class="text-base md:text-lg text-black mt-2">We are committed to your success and growth.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="text-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10" id="text-2">
           <!-- Feature 1: Expert Team -->
-          <div class="p-6 flex flex-col items-center text-center gap-4">
+          <div class="p-6 flex flex-col items-center text-center gap-4 bg-white rounded-xl shadow transition-all h-full">
             <div class="rounded-full h-20 w-20 bg-black flex items-center justify-center">
               <svg class="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.25 0m-5.25 0a3.75 3.75 0 00-5.25 0M3 13.5a9 9 0 0118 0v-3a9 9 0 00-18 0v3z" />
               </svg>
             </div>
-            <h3 class="text-2xl font-semibold text-black">Expert Team</h3>
-            <p class="text-black">Our team consists of experienced professionals dedicated to delivering top-notch results.</p>
+            <h3 class="text-xl md:text-2xl font-semibold text-black">Expert Team</h3>
+            <p class="text-black text-base md:text-lg">Our team consists of experienced professionals dedicated to delivering top-notch results.</p>
           </div>
           <!-- Feature 2: Tailored Solutions -->
-          <div class="p-6 flex flex-col items-center text-center gap-4">
+          <div class="p-6 flex flex-col items-center text-center gap-4 bg-white rounded-xl shadow transition-all h-full">
             <div class="rounded-full h-20 w-20 bg-black flex items-center justify-center">
               <svg class="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
               </svg>
             </div>
-            <h3 class="text-2xl font-semibold text-black">Tailored Solutions</h3>
-            <p class="text-black">We provide customized strategies that align with your unique business goals.</p>
+            <h3 class="text-xl md:text-2xl font-semibold text-black">Tailored Solutions</h3>
+            <p class="text-black text-base md:text-lg">We provide customized strategies that align with your unique business goals.</p>
           </div>
           <!-- Feature 3: Data-Driven Approach -->
-          <div class="p-6 flex flex-col items-center text-center gap-4">
+          <div class="p-6 flex flex-col items-center text-center gap-4 bg-white rounded-xl shadow transition-all h-full">
             <div class="rounded-full h-20 w-20 bg-black flex items-center justify-center">
               <svg class="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
               </svg>
             </div>
-            <h3 class="text-2xl font-semibold text-black">Data-Driven Approach</h3>
-            <p class="text-black">We leverage data and analytics to make informed decisions and optimize for success.</p>
+            <h3 class="text-xl md:text-2xl font-semibold text-black">Data-Driven Approach</h3>
+            <p class="text-black text-base md:text-lg">We leverage data and analytics to make informed decisions and optimize for success.</p>
           </div>
         </div>
       </section>
@@ -122,24 +120,24 @@
               <p class="text-lg text-black mt-2">Divе Dееpеr Into Our Cliеnt Work</p>
           </div>
       
-          <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl">
-              <div class="  text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105">
+          <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl min-h-[400px]">
+              <div class="text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105 min-h-[350px]">
                   <div class="flex flex-col justify-center items-center p-[20px]">
-                      <img src="/edu.png" alt="edureka" class="h-[30vh]  top-0">
-                      <div class="text-black" >By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
-                  </div>
-              </div>
-      
-              <div class="  text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105">
-                  <div class="flex flex-col justify-center items-center p-[20px] ">
-                      <img src="/livespace.pdf-removebg-preview.png" alt="Live Space" class=" h-[30vh]">
+                      <img src="/edu.png" alt="edureka" class="h-[30vh] w-auto aspect-[4/3] top-0" loading="lazy">
                       <div class="text-black">By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
                   </div>
               </div>
       
-              <div class="  text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold z-20 hover:border-2 hover:border-black hover:scale-105">
+              <div class="text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105 min-h-[350px]">
+                  <div class="flex flex-col justify-center items-center p-[20px] ">
+                      <img src="/livespace.pdf-removebg-preview.png" alt="Live Space" class="h-[30vh] w-auto aspect-[4/3]" loading="lazy">
+                      <div class="text-black">By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
+                  </div>
+              </div>
+      
+              <div class="text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold z-20 hover:border-2 hover:border-black hover:scale-105 min-h-[350px]">
                   <div class="flex flex-col justify-center items-center p-[20px]">
-                      <div class=" h-[30vh] " ><img src="/lambda.png" alt="Lambda Test" class=" h-[20vh] " ></div>
+                      <div class="h-[30vh] aspect-[4/3]"><img src="/lambda.png" alt="Lambda Test" class="h-[20vh] w-auto aspect-[4/3]" loading="lazy"></div>
                       <div class="text-black">By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
                   </div>
               </div>
@@ -149,7 +147,7 @@
 
         <!-- 2nd compartment end -->
           <!-- 3rd compartment -->
-           <div class="bg-[#4361ee] py-16 w-screen flex flex-col items-center gap-6">
+           <div class="bg-[#4361ee] py-16 w-full max-w-full flex flex-col items-center gap-6">
               <!-- Headings -->
               <div class="text-center ">
                 <h2 class="text-3xl font-bold text-white">What Our Clients Say</h2>
@@ -157,13 +155,11 @@
               </div>
 
               <!-- Swiper.js Placeholder -->
-              <div class=" w-screen mt-6">
+              <div class="w-full max-w-full mt-6">
                 <div class="bg-white border rounded-lg shadow p-6 text-center text-gray-700">
-                 
-                    <div class="swiper mySwiper flex flex-row justify-between items-center ">
+                  <div class="swiper mySwiper flex flex-row justify-between items-center max-w-full overflow-x-hidden">
                     <div class="swiper-wrapper" id="swiper-wrapper"></div>
                   </div>
-                      
                 </div>
               </div>
               
@@ -171,18 +167,20 @@
 
            <!-- 3rd compartment end here -->
                       <!-- 4th Compartment: Affiliate Partner -->
-              <section class="text-center space-y-4 w-screen">
+              <section class="text-center space-y-4 w-full max-w-full">
                 <h2 class="text-3xl font-bold text-white">Affiliate Partner</h2>
                 <p class="text-white">We have partnered with top brands</p>
-                <div class="bg-white !h-[15vh]"> <div class="swiper mySwiper  ">
-                  <div class="swiper-wrapper !h-[10vh] ">
-                    <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Amazon-removebg-preview.png" alt=""></div>
-                    <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Shopify-removebg-preview.png" alt=""></div>
-                    <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Etsy-removebg-preview.png" alt=""></div>
-                    <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Ebay-removebg-preview.png" alt=""></div>
-                    <div class="swiper-slide !h-[10vh] !bg-white"><img src="/WooCommerce-removebg-preview.png" alt=""></div>
+                <div class="bg-white !h-[15vh] w-full max-w-full overflow-x-hidden">
+                  <div class="swiper mySwiper w-full max-w-full">
+                    <div class="swiper-wrapper !h-[10vh] w-full max-w-full">
+                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Amazon-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
+                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Shopify-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
+                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Etsy-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
+                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Ebay-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
+                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/WooCommerce-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
+                    </div>
                   </div>
-                
+                </div>
               </section>
 
               <!-- 6th Compartment: Trusted By -->
@@ -244,7 +242,31 @@
      <script type="module" src="/src/main.js"></script>
      <script type="module" src="/src/main.ts"></script>
      <script type="module" src="/src/mainexport.ts"></script>
-    
+     <script>
+  // If using GSAP ScrollTrigger
+  if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === "function") {
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        window.ScrollTrigger.refresh();
+      }, 100);
+    });
+  }
+  // If using Swiper
+  if (window.Swiper && typeof window.Swiper.update === "function") {
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.querySelectorAll('.swiper').forEach(swiperEl => {
+          if (swiperEl.swiper) swiperEl.swiper.update();
+        });
+      }, 100);
+    });
+  }
+  // Prevent accidental scroll jump on resize
+  window.addEventListener('resize', () => {
+    document.documentElement.scrollLeft = 0;
+    document.body.scrollLeft = 0;
+  });
+</script>
 </body>
 
 </html>   

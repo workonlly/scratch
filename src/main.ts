@@ -5,12 +5,24 @@ import { email } from './email';
 import Services from './links';
 import { Wave } from './wavy';
 import { maindata } from './maindata';
+import { mdata } from './maindatakeywords';
 import { maindata2 } from './maindata2';
 import { liblog } from './blog';
-import { login } from './login';
+import { loginn } from './login';
 const mount = document.getElementById('app');
 if (mount) {
   mount.innerHTML = renderHeader();
+    (() => {
+      const burgerBtn = document.getElementById('burger-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    })();
+
 }else{
     console.log("header not loading")
 }
@@ -45,11 +57,6 @@ if(servo){
  }
 
 
-const log=document.getElementById("log")
-if(log){
-
-  log.innerHTML=login();
-}
 
 window.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname.replace(/\/+$/, '');
@@ -170,3 +177,35 @@ linko.forEach(link => {
     link.classList.add('bg-white', 'text-black');
   }
 });
+
+
+const login= document.getElementById("login");
+
+if(login){
+  login.innerHTML = loginn();
+}
+
+
+
+
+const tittle=window.location.search
+
+if (tittle) {
+ const title= mdata.find((item) => item.id === Number(tittle.split('=')[1]));
+  if (title) {
+    document.title = title.title;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', title.description || '');
+    document.querySelector('meta[name="keywords"]')?.setAttribute('content', title.metakeywords.join(', ') || '');  
+  }else {
+    document.title = "Lacleo Digital";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Default description');
+    document.querySelector('meta[name="keywords"]')?.setAttribute('content', 'default, keywords');
+  }}
+else if(tittle === ""){
+    const title= mdata.find((item) => item.id === 111);
+    if (title) {
+      document.title = title.title;
+      document.querySelector('meta[name="description"]')?.setAttribute('content', title.description || '');
+      document.querySelector('meta[name="keywords"]')?.setAttribute('content', title.metakeywords.join(', ') || '');
+
+}}

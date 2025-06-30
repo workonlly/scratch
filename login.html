@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="global.css">
+</head>
+<body class="bg-white overflow-x-hidden">
+  <div class="flex items-center justify-center min-h-screen ">
+    <div id="login" class="w-full "></div>
+  </div>
+  <script>
+    function login() {
+      const name=document.getElementById("name").value;
+      const password = document.getElementById("password").value;
+      if (password === "admin123" &&  name === "admin") {
+        localStorage.setItem("isAdmin", "true");
+        window.location.href = "admin.html";
+      } else {
+        document.getElementById("error").textContent = "Wrong password!";
+      }
+    }
+  </script>
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>

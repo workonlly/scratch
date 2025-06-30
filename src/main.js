@@ -34,7 +34,7 @@ async function fetchAndRenderSlides() {
       slide.className = 'swiper-slide';
       slide.innerHTML = `
         <div style="padding: 20px;  border-radius: 12px; text-align:left;  ">
-        <div style="border-radius:10px; height:80px;width:80px; "> ${generateRandomStarsEmoji()}  </div>
+        <div style="border-radius:10px; height:40px;width:80px; "> ${generateRandomStarsEmoji()}  </div>
           <p>${name}</p>
           <p><strong>Region:</strong> ${feedback}</p>
           <p><strong>Review:</strong> ${rating}</p>
