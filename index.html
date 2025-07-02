@@ -1,248 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script type="module" src="/src/gsap.ts"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="This is a web page about AI-powered tools.">
-    <meta name="keywords" content="AI, tools, technology, innovation">
+    <meta name="description" content="LaCleo Digital - B2B Lead Generation Specialists providing data-driven marketing solutions">
+    <meta name="keywords" content="B2B, lead generation, digital marketing, CRM, data enrichment">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/button.css">
     <link rel="stylesheet" href="/src/style.css">
     <link rel="stylesheet" href="/global.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <title>vercel</title>
-<script type="module" src="/src/gsap.ts"></script>
-</head>
-<body class="bg-white overflow-x-hidden sm:overflow-x-hidden content-center">
-  <div
-    id="loader"
-    class="fixed inset-0 w-screen h-screen flex justify-center items-center bg-transparent z-50"
-  >
-    <div
-      id="loader-box"
-      class="flex w-screen h-screen justify-center items-center bg-white/30 backdrop-blur-sm absolute text-4xl font-bold shadow-xl animated-gradient-text text-3xl sm:text-5xl md:text-6xl"
-    >
-      Lacleo Digital
-    </div>
-  </div>
-  <div class="sticky top-0 z-50 bg-white m-auto rounded-sm opacity-0 content-center w-full max-w-full" id="main-content">
-    <div id="app"></div>
-  </div>
-   
-
-  <!-- Main Content Section -->
-  <div class="flex flex-col md:flex-row items-center justify-between gap-6 px-4 mt-20 w-full max-w-full">
-    <!-- Text Left -->
-    <div class="flex flex-col gap-4 md:w-1/2 z-30 ml-0 md:ml-[30px]" id="step1">
-      <h1 class="text-4xl md:text-6xl font-bold text-black wave-text">
-        <span>(</span>
-        <span>B</span>
-        <span>2</span>
-        <span>B</span>
-        <span>)</span>
-        
-        </h1>
-      <h2 class="text-4xl md:text-6xl font-bold text-black typewriter">Lead Generation</h2>
-      <h2 class="text-4xl md:text-6xl font-bold text-black typewriter">Specialist</h2>
-      <p class="text-2xl md:text-4xl font-semibold text-[#38b000]">For Sales Lead</p>
-      <p class="text-base md:text-xl max-w-full md:max-w-[50vw] text-black" id="step11">
-        The strategic virtual marketing campaigns to in-depth records research and analysis. Our dedicated team is using your business ahead. Lacleo Digital is here to provide exceptional customer guide and deliver innovative strategies tailored for your unique needs.
-      </p>
-    </div>
-
-    <!-- Video Right -->
-    <div class="w-full md:w-1/2 flex justify-center z-30" id="step2">
-      <video src="/Project Proposal Presentation.mp4" autoplay loop muted playsinline class="rounded-lg w-full max-w-xs sm:max-w-md md:max-w-[500px] aspect-video"></video>
-    </div>
-
-  
-  <div class="flex w-[100%] h-[100%] flex-row justify-end right-10 top-10  bg-transparent  animated-gradient-text absolute  gap-1 z-10 hidden md:block lg:block"  >
-   <div class="w-[2%] h-[60%]  border-2  rounded-full  border-black" id="slide-1" ></div>
-   <div class="w-[2%] h-[70%] border-2  rounded-full border-black"  id="slide-2"></div>
-   <div class="w-[2%] h-[80%] border-2  rounded-full border-black"  id="slide-3"></div>
-  </div>
-   
-  </div>
-
-
-
-
-       <!-- section -->
-         <div id="ser" class="fade-in mt-[40vh] mx-auto flex justify-center"></div>
-      <!-- section end here       -->
-      
-
-      <!-- Why Work With Us Section -->
-      <section class="px-4 sm:px-6 md:px-10 my-10 md:my-20 py-10 md:py-16 bg-white/70 backdrop-blur-md shadow-lg rounded-lg max-w-6xl mx-auto">
-        <div class="text-center mb-8 md:mb-12" id="text-1">
-          <h2 class="text-3xl md:text-4xl font-bold text-black">Why Work With Us?</h2>
-          <p class="text-base md:text-lg text-black mt-2">We are committed to your success and growth.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10" id="text-2">
-          <!-- Feature 1: Expert Team -->
-          <div class="p-6 flex flex-col items-center text-center gap-4 bg-white rounded-xl shadow transition-all h-full">
-            <div class="rounded-full h-20 w-20 bg-black flex items-center justify-center">
-              <svg class="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.25 0m-5.25 0a3.75 3.75 0 00-5.25 0M3 13.5a9 9 0 0118 0v-3a9 9 0 00-18 0v3z" />
-              </svg>
-            </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-black">Expert Team</h3>
-            <p class="text-black text-base md:text-lg">Our team consists of experienced professionals dedicated to delivering top-notch results.</p>
-          </div>
-          <!-- Feature 2: Tailored Solutions -->
-          <div class="p-6 flex flex-col items-center text-center gap-4 bg-white rounded-xl shadow transition-all h-full">
-            <div class="rounded-full h-20 w-20 bg-black flex items-center justify-center">
-              <svg class="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
-              </svg>
-            </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-black">Tailored Solutions</h3>
-            <p class="text-black text-base md:text-lg">We provide customized strategies that align with your unique business goals.</p>
-          </div>
-          <!-- Feature 3: Data-Driven Approach -->
-          <div class="p-6 flex flex-col items-center text-center gap-4 bg-white rounded-xl shadow transition-all h-full">
-            <div class="rounded-full h-20 w-20 bg-black flex items-center justify-center">
-              <svg class="w-10 h-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-              </svg>
-            </div>
-            <h3 class="text-xl md:text-2xl font-semibold text-black">Data-Driven Approach</h3>
-            <p class="text-black text-base md:text-lg">We leverage data and analytics to make informed decisions and optimize for success.</p>
-          </div>
-        </div>
-      </section>
-
-        <!-- 2nd compartment -->
-        <div class=" py-16 px-4 flex flex-col items-center gap-8 rounded-t-[100px] shadow-xl/30 overflow-hidden z-0">
-          <div class="text-center" id="text-3">
-              <h2 class="text-3xl font-bold text-black">Some Of Our Case Studies</h2>
-              <p class="text-lg text-black mt-2">Divе Dееpеr Into Our Cliеnt Work</p>
-          </div>
-      
-          <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl min-h-[400px]">
-              <div class="text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105 min-h-[350px]">
-                  <div class="flex flex-col justify-center items-center p-[20px]">
-                      <img src="/edu.png" alt="edureka" class="h-[30vh] w-auto aspect-[4/3] top-0" loading="lazy">
-                      <div class="text-black">By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
-                  </div>
-              </div>
-      
-              <div class="text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold hover:border-2 hover:border-black hover:scale-105 min-h-[350px]">
-                  <div class="flex flex-col justify-center items-center p-[20px] ">
-                      <img src="/livespace.pdf-removebg-preview.png" alt="Live Space" class="h-[30vh] w-auto aspect-[4/3]" loading="lazy">
-                      <div class="text-black">By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
-                  </div>
-              </div>
-      
-              <div class="text-4 h-120 bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center text-white text-xl font-semibold z-20 hover:border-2 hover:border-black hover:scale-105 min-h-[350px]">
-                  <div class="flex flex-col justify-center items-center p-[20px]">
-                      <div class="h-[30vh] aspect-[4/3]"><img src="/lambda.png" alt="Lambda Test" class="h-[20vh] w-auto aspect-[4/3]" loading="lazy"></div>
-                      <div class="text-black">By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.</div>
-                  </div>
-              </div>
-      
-          </div>
-      </div>
-
-        <!-- 2nd compartment end -->
-          <!-- 3rd compartment -->
-           <div class="bg-[#4361ee] py-16 w-full max-w-full flex flex-col items-center gap-6">
-              <!-- Headings -->
-              <div class="text-center ">
-                <h2 class="text-3xl font-bold text-white">What Our Clients Say</h2>
-                <p class="text-lg mt-2 text-white">Somе kind words from our rеspеctеd cliеnts</p>
-              </div>
-
-              <!-- Swiper.js Placeholder -->
-              <div class="w-full max-w-full mt-6">
-                <div class="bg-white border rounded-lg shadow p-6 text-center text-gray-700">
-                  <div class="swiper mySwiper flex flex-row justify-between items-center max-w-full overflow-x-hidden">
-                    <div class="swiper-wrapper" id="swiper-wrapper"></div>
-                  </div>
-                </div>
-              </div>
-              
-            
-
-           <!-- 3rd compartment end here -->
-                      <!-- 4th Compartment: Affiliate Partner -->
-              <section class="text-center space-y-4 w-full max-w-full">
-                <h2 class="text-3xl font-bold text-white">Affiliate Partner</h2>
-                <p class="text-white">We have partnered with top brands</p>
-                <div class="bg-white !h-[15vh] w-full max-w-full overflow-x-hidden">
-                  <div class="swiper mySwiper w-full max-w-full">
-                    <div class="swiper-wrapper !h-[10vh] w-full max-w-full">
-                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Amazon-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
-                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Shopify-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
-                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Etsy-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
-                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Ebay-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
-                      <div class="swiper-slide !h-[10vh] !bg-white"><img src="/WooCommerce-removebg-preview.png" alt="" class="aspect-[4/3] w-auto h-full" loading="lazy"></div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- 6th Compartment: Trusted By -->
-              <section class="px-10 my-16">
-                <div class="text-center mb-12">
-                  <h2 class="text-4xl font-bold text-white">Trusted by Industry Leaders</h2>
-                  <p class="text-lg text-white mt-2">We are proud to partner with amazing companies.</p>
-                </div>
-                <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
-                  <!-- Left Side: Text -->
-                  <div class="w-full md:w-1/2 p-8 bg-white backdrop-blur-md shadow-lg rounded-lg flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-black mb-4">Choose LaClеo Digital</h3>
-                    <p class="text-black leading-relaxed">
-                      For our unrivalеd еxpеrtisе, pеrsonalizеd approach, and commitmеnt to dеlivеring mеasurablе rеsults. Wе arе your trustеd partnеr in achiеving virtual еxcеllеncе and surpassing your businеss dreams.
-                    </p>
-                  </div>
-                  <!-- Right Side: Logos -->
-                  <div class="w-full md:w-1/2 p-8 bg-white backdrop-blur-md shadow-lg rounded-lg">
-                    <div class="grid grid-cols-3 gap-8 items-center justify-center h-full">
-                      <!-- Placeholder Logos -->
-                      <div class="flex justify-center items-center">
-                        <img src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" class="h-12">
-                      </div>
-                      <div class="flex justify-center items-center">
-                        <img src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" class="h-12">
-                      </div>
-                      <div class="flex justify-center items-center">
-                        <img src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" class="h-12">
-                      </div>
-                      <div class="flex justify-center items-center">
-                        <img src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" class="h-12">
-                      </div>
-                      <div class="flex justify-center items-center">
-                        <img src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" class="h-12">
-                      </div>
-                      <div class="flex justify-center items-center">
-                        <img src="https://tailwindui.com/img/logos/158x48/laravel-logo-gray-900.svg" alt="Laravel" class="h-12">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <!-- 8th Compartment: Book a Consultation -->
-              <section class="text-center space-y-4">
-                <div class="mt-4  font-semibold underline cursor-pointer text-black hover:text-white">
-                  Book our consultation
-                </div>
-              </section>
-              </main>
-                <!-- main section end here -->
-                  </div>
-                </div>
-              </div>
-              </div>
-              </div>
-              
-                <div id="fe"></div>
-     <script type="module" src="/src/main.js"></script>
-     <script type="module" src="/src/main.ts"></script>
-     <script type="module" src="/src/mainexport.ts"></script>
-     <script>
+    <title>LaCleo Digital - B2B Lead Generation Specialists</title>
+    <script>
   // If using GSAP ScrollTrigger
   if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === "function") {
     window.addEventListener("load", () => {
@@ -267,8 +38,278 @@
     document.body.scrollLeft = 0;
   });
 </script>
-</body>
+</head>
+<body class=" overflow-x-hidden">
 
-</html>   
+  <!-- Enhanced Loader -->
+  <div id="loader" class="fixed inset-0 w-screen h-screen flex justify-center items-center z-50 bg-black">
+    <div id="loader-box" class="flex w-screen h-screen justify-center items-center absolute">
+      <div class="text-center">
+        <div class="text-white text-4xl sm:text-6xl md:text-7xl font-bold mb-4 animate-pulse">
+          LaCleo Digital
+        </div>
+        <div class="w-32 h-1 bg-white/30 rounded-full mx-auto overflow-hidden">
+          <div class="w-full h-full bg-white rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="sticky top-2 z-50 opacity-0 transition-all duration-700 ease-out" id="main-content">
+    <div class="w-full flex justify-center px-4">
+      <div id="app" class="w-full transition-all duration-700 ease-out"></div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center overflow-hidden mt-10 ">
+  
+
+    <div class="container mx-auto px-4 md:px-8 flex flex-col lg:flex-row items-center gap-12  ">
+      <!-- Hero Text -->
+      <div class="flex-1 text-center lg:text-left space-y-6" id="hero-text">
+        <div class="space-y-4">
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight">
+            <span class="inline-block wave-text text-blue-600">
+              <span>(</span>
+              <span>B</span>
+              <span>2</span>
+              <span>B</span>
+              <span>)</span>
+            </span>
+          </h1>
+          <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 typewriter">
+            Lead Generation
+          </h2>
+          <h3 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900">
+            Specialists
+          </h3>
+          <p class="text-2xl md:text-4xl font-semibold text-green-600 animate-bounce">
+            For Sales Growth
+          </p>
+        </div>
+        
+        <p class="text-lg md:text-xl text-gray-700 max-w-2xl leading-relaxed">
+          Transform your business with strategic virtual marketing campaigns and in-depth data analysis. 
+          Our dedicated team delivers exceptional results through innovative, tailored strategies.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 pt-6">
+          <a href="contactus/index.html" class="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+            Get Started Today
+          </a>
+          <a href="services.html" class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-full font-semibold hover:bg-blue-600 hover:text-white transform hover:scale-105 transition-all duration-300">
+            View Our Work
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Video -->
+      <div class="flex-1 flex justify-center" id="hero-video">
+        <div class="relative group">
+          <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
+          <video 
+            src="/Project Proposal Presentation.mp4" 
+            autoplay loop muted playsinline 
+            class="relative rounded-2xl shadow-2xl w-full max-w-lg aspect-video"
+          ></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white" id="services-section">
+    <div id="ser" class="container mx-auto px-4"></div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50" id="why-choose-us">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16" id="why-title">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Choose LaCleo?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">We are committed to your success and growth through innovative solutions</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto" id="features-grid">
+        <!-- Feature Cards -->
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 715.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
+          <p class="text-gray-600 leading-relaxed">Experienced professionals dedicated to delivering exceptional results with cutting-edge strategies.</p>
+        </div>
+
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Tailored Solutions</h3>
+          <p class="text-gray-600 leading-relaxed">Customized strategies that align perfectly with your unique business goals and requirements.</p>
+        </div>
+
+        <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Data-Driven Results</h3>
+          <p class="text-gray-600 leading-relaxed">Advanced analytics and data insights to optimize performance and maximize your ROI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- 2nd compartment -->
+  <div class="py-8 md:py-16 px-4 md:px-6 lg:px-10 flex flex-col items-center gap-6 md:gap-8 rounded-t-[50px] md:rounded-t-[100px] shadow-xl/30 overflow-hidden z-0 mx-auto max-w-7xl">
+    <div class="text-center px-4" id="text-3">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-black">Some Of Our Case Studies</h2>
+        <p class="text-base md:text-lg text-black mt-2">Divе Dееpеr Into Our Cliеnt Work</p>
+    </div>
+
+    <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full max-w-6xl px-4 md:px-0">
+        <div class="bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center hover:border-2 hover:border-black hover:scale-105 transition-all duration-300 min-h-[300px] md:min-h-[350px]">
+            <div class="flex flex-col justify-center items-center p-4 md:p-6 text-center">
+                <div class="h-[20vh] md:h-[25vh] lg:h-[30vh] w-full mb-4 flex items-center justify-center">
+                    <img src="/edu.png" alt="edureka" class="max-h-full w-auto object-contain" loading="lazy">
+                </div>
+                <div class="text-black text-sm md:text-base lg:text-lg leading-relaxed">
+                    By intеgrating CRM systеms with thеir digital structures, Edurеka strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center hover:border-2 hover:border-black hover:scale-105 transition-all duration-300 min-h-[300px] md:min-h-[350px]">
+            <div class="flex flex-col justify-center items-center p-4 md:p-6 text-center">
+                <div class="h-[20vh] md:h-[25vh] lg:h-[30vh] w-full mb-4 flex items-center justify-center">
+                    <img src="/livespace.pdf-removebg-preview.png" alt="Live Space" class="max-h-full w-auto object-contain" loading="lazy">
+                </div>
+                <div class="text-black text-sm md:text-base lg:text-lg leading-relaxed">
+                    By intеgrating CRM systеms with thеir digital structures, LiveSpace strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white backdrop-blur-md shadow-xl/30 rounded-lg shadow-md flex items-center justify-center hover:border-2 hover:border-black hover:scale-105 transition-all duration-300 min-h-[300px] md:min-h-[350px] md:col-span-2 lg:col-span-1">
+            <div class="flex flex-col justify-center items-center p-4 md:p-6 text-center">
+                <div class="h-[20vh] md:h-[25vh] lg:h-[30vh] w-full mb-4 flex items-center justify-center">
+                    <img src="/lambda.png" alt="Lambda Test" class="max-h-full w-auto object-contain" loading="lazy">
+                </div>
+                <div class="text-black text-sm md:text-base lg:text-lg leading-relaxed">
+                    By intеgrating CRM systеms with thеir digital structures, LambdaTest strеamlinеd customеr information managеmеnt, rеsulting in a 20% incrеasе in rеpеat purchasеs, pеrsonalizеd markеting campaigns, and еnhancеd customеr loyalty.
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- 2nd compartment end -->
+
+  <!-- 3rd compartment -->
+     <div class="bg-[#4361ee] py-16 w-full max-w-full flex flex-col items-center gap-6">
+        <!-- Headings -->
+        <div class="text-center ">
+          <h2 class="text-3xl font-bold text-white">What Our Clients Say</h2>
+          <p class="text-lg mt-2 text-white">Somе kind words from our rеspеctеd cliеnts</p>
+        </div>
+
+        <!-- Swiper.js Placeholder -->
+        <div class="w-full max-w-full mt-6">
+          <div class="bg-white border rounded-lg shadow p-6 text-center text-gray-700">
+            <div class="swiper mySwiper flex flex-row justify-between items-center max-w-full overflow-x-hidden">
+              <div class="swiper-wrapper" id="swiper-wrapper"></div>
+            </div>
+          </div>
+        </div>
+        
+      
+
+     <!-- 3rd compartment end here -->
+                <!-- 4th Compartment: Affiliate Partner -->
+        <section class="text-center space-y-4 w-full max-w-full">
+          <h2 class="text-3xl font-bold text-white">Affiliate Partner</h2>
+          <p class="text-white">We have partnered with top brands</p>
+          <div class="bg-white !h-[15vh] w-full max-w-full overflow-x-hidden">
+            <div class="swiper mySwiper w-full max-w-full">
+              <div class="swiper-wrapper !h-[10vh] w-full max-w-full">
+                <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Amazon-removebg-preview.png" alt="" class=" w-auto h-full" loading="lazy"></div>
+                <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Shopify-removebg-preview.png" alt="" class=" w-auto h-full" loading="lazy"></div>
+                <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Etsy-removebg-preview.png" alt="" class=" w-auto h-full" loading="lazy"></div>
+                <div class="swiper-slide !h-[10vh] !bg-white"><img src="/Ebay-removebg-preview.png" alt="" class=" w-auto h-full" loading="lazy"></div>
+                <div class="swiper-slide !h-[10vh] !bg-white"><img src="/WooCommerce-removebg-preview.png" alt="" class=" w-auto h-full" loading="lazy"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6th Compartment: Trusted By -->
+        <section class="px-10 my-16">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-white">Trusted by Industry Leaders</h2>
+            <p class="text-lg text-white mt-2">We are proud to partner with amazing companies.</p>
+          </div>
+          <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
+            <!-- Left Side: Text -->
+            <div class="w-full md:w-1/2 p-8 bg-white backdrop-blur-md shadow-lg rounded-lg flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-black mb-4">Choose LaClеo Digital</h3>
+              <p class="text-black leading-relaxed">
+                For our unrivalеd еxpеrtisе, pеrsonalizеd approach, and commitmеnt to dеlivеring mеasurablе rеsults. Wе arе your trustеd partnеr in achiеving virtual еxcеllеncе and surpassing your businеss dreams.
+              </p>
+            </div>
+            <!-- Right Side: Logos -->
+            <div class="w-full md:w-1/2 p-8 bg-white backdrop-blur-md shadow-lg rounded-lg">
+              <div class="grid grid-cols-3 gap-8 items-center justify-center h-full">
+                <!-- Placeholder Logos -->
+                <div class="flex justify-center items-center">
+                  <img src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" class="h-12">
+                </div>
+                <div class="flex justify-center items-center">
+                  <img src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" class="h-12">
+                </div>
+                <div class="flex justify-center items-center">
+                  <img src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" class="h-12">
+                </div>
+                <div class="flex justify-center items-center">
+                  <img src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" class="h-12">
+                </div>
+                <div class="flex justify-center items-center">
+                  <img src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" class="h-12">
+                </div>
+                <div class="flex justify-center items-center">
+                  <img src="https://tailwindui.com/img/logos/158x48/laravel-logo-gray-900.svg" alt="Laravel" class="h-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8th Compartment: Book a Consultation -->
+        <section class="text-center space-y-4">
+          <a href="contactus/index.html"><div class="mt-4  font-semibold underline cursor-pointer text-black hover:text-white">
+            Book our consultation
+          </div></a>
+        </section>
+        </main>
+          <!-- main section end here -->
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        
+          <div id="fe"></div>
+   <script type="module" src="/src/main.js"></script>
+   <script type="module" src="/src/main.ts"></script>
+   <script type="module" src="/src/mainexport.ts"></script>
+
+</body>
 
 </html>

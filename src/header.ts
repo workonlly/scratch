@@ -1,7 +1,7 @@
 // Header.ts
 export function renderHeader(): string {
   return `
-  <div class="relative flex flex-row justify-between items-center h-20 px-4">
+  <div class="relative flex flex-row justify-between items-center h-20 mx-4 bg-white  ">
     <!-- Logo -->
     <img src="/Yellow_and_Blue_Clean_and_Minimalist_Tech_Company_Logo__1_-removebg-preview.png" alt="Logo" class="h-14 md:h-[200px]">
 
@@ -24,7 +24,7 @@ export function renderHeader(): string {
     </div>
 
     <!-- Desktop Navigation -->
-    <div class="hidden md:flex flex-row items-center md:gap-3">
+    <div class="hidden md:flex flex-row items-center md:gap-3 ">
       <a href="/?id=111" class="nav-link text-center font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Home</a>
       <div class="relative group">
         <a href="/services?id=112" class="nav-link font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black flex items-center">
@@ -43,10 +43,11 @@ export function renderHeader(): string {
 
     <!-- CTA Button (Desktop only) -->
     <div class="translate-y-[1px] right-5 g-hov w-[50%] sm:w-[30%] md:w-[16%] h-[60%] z-30 g-hov hidden md:block">
+     <a href="contactus/index.html">
       <div class="button-1"></div>
       <div class="button-2"></div>
-      <div class="button-3 flex justify-center items-center text-sm sm:text-base font-medium text-white">BOOK A CONSULTATION</div>
-    </div>
+     <div class="button-3 flex justify-center items-center text-sm sm:text-base font-medium text-white">BOOK A CONSULTATION</div>
+    </div></a>
   </div>
 
   <script>

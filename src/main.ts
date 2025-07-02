@@ -1,14 +1,19 @@
 
 import { renderHeader } from './header';
 import { Footer } from './footer';
-import { email } from './email';
 import Services from './links';
 import { Wave } from './wavy';
-import { maindata } from './maindata';
-import { mdata } from './maindatakeywords';
-import { maindata2 } from './maindata2';
+import { maindata ,dataLoaded1 } from './maindata';
+import { mdata,datalLoaded3 } from './maindatakeywords';
+import { maindata2,datalLoaded2 } from './maindata2';
 import { liblog } from './blog';
 import { loginn } from './login';
+import { image ,datalLoaded4} from './mainimage';
+
+Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => {
+  console.log('✅ All data loaded');
+
+// header value
 const mount = document.getElementById('app');
 if (mount) {
   mount.innerHTML = renderHeader();
@@ -26,7 +31,9 @@ if (mount) {
 }else{
     console.log("header not loading")
 }
+// header value end here
 
+// footer
 const foot=document.getElementById("fe")
 
 if (foot) {
@@ -34,18 +41,19 @@ if (foot) {
 }else{
     console.log("header not loading")
 }
+// footer end
 
-const emai=document.getElementById("em")
 
-if (emai) {
-  emai.innerHTML = email();
-}else{
-    console.log("header not loading")
-}
+
+// services  link.ts
 
 const servo= document.getElementById("ser")
 if(servo){
  servo.innerHTML=Services()}
+
+// services end
+
+  // wave.ts
 
  const wave=document.getElementById("wave")
 
@@ -55,7 +63,7 @@ if(servo){
  else{
   console.log("not able to load")
  }
-
+// wave.ts end
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -81,6 +89,11 @@ window.addEventListener('DOMContentLoaded', () => {
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get('id')); // Convert string to number
 
+
+
+
+
+// Show.html
 const container = document.getElementById('service-contain');
 const noly = document.getElementById('text-noly');
 
@@ -110,8 +123,10 @@ if (container && noly && !isNaN(id)) {
   if (noly) noly.innerHTML = '';
 }
 
+// Show.html end
 
 
+// blog.html
 const divblog=document.getElementById("blog");
 
 if (divblog) {
@@ -129,6 +144,9 @@ if (divblog) {
 
   divblog.innerHTML = html;
 }
+// blog.html end
+
+
 
 const secondid=document.getElementById("second-id")
 
@@ -137,11 +155,14 @@ if (secondid){
   const flexrow=maindata2.filter((item)=> item.id==id);
 
   if(flexrow){
-
-    const vtml=flexrow.map((items)=>`
+    
+    const vtml=flexrow.map((items)=>{
+      const imo = image.find((itemr) => itemr.id === items.sid);
+      return`
 <div class="bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full">
-      <div class="rounded-full h-14 w-14 bg-black"></div>
-
+       <div class="rounded-full h-[60px] w-[60px] overflow-hidden">
+          <img src="${imo ? imo.imageurl : ""}" alt="" class="object-fill rounded-full w-full h-full" />
+        </div>
       <h3 class="text-xl font-semibold text-black"> ${items.promo}</h3>
 
       <p class="text-sm px-2 text-black">
@@ -152,7 +173,7 @@ if (secondid){
         Learn more →
       </a>
     </div>
-    `).join("")
+    `}).join("")
 
     secondid.innerHTML=vtml
   }
@@ -209,3 +230,7 @@ else if(tittle === ""){
       document.querySelector('meta[name="keywords"]')?.setAttribute('content', title.metakeywords.join(', ') || '');
 
 }}
+
+});
+
+

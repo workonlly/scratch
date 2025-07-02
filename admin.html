@@ -14,7 +14,7 @@
     }
 
     // Session timeout logic
-    function startSessionTimeout({ timeoutMinutes = 3 } = {}) {
+    function startSessionTimeout({ timeoutMinutes = 1 } = {}) {
       const timeoutMs = timeoutMinutes * 60 * 1000;
       let timeout;
 
@@ -34,7 +34,7 @@
       resetTimeout();
     }
 
-    startSessionTimeout({ timeoutMinutes: 3 });
+    startSessionTimeout({ timeoutMinutes: 1 });
   </script>
   <div class="flex flex-col md:flex-row gap-1 p-2 bg-black min-h-screen w-full">
     <!-- side pannel -->

@@ -79,3 +79,10 @@ body, .container, .max-w-5xl, .w-full, section, header, div, p, a, span {
     word-break: break-all;
   }
 }
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
