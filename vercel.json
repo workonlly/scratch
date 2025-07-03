@@ -1,6 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
     { "source": "/show", "destination": "/show.html" },
     { "source": "/services", "destination": "/services.html" },
     { "source": "/contactus", "destination": "/contactus/index.html" },
@@ -8,7 +7,8 @@
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/case-studies", "destination": "/case-studies.html" },
     { "source": "/admin", "destination": "/admin.html" },
-    { "source": "/dashboard", "destination": "/dashboard.html" }
+    { "source": "/dashboard", "destination": "/dashboard.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "cleanUrls": true,
   "trailingSlash": false,
