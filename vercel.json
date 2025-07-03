@@ -1,46 +1,48 @@
 {
+  "functions": {
+    "src/api/**/*.ts": {
+      "runtime": "@vercel/node"
+    }
+  },
   "rewrites": [
-    { "source": "/show", "destination": "/show.html" },
-    { "source": "/services", "destination": "/services.html" },
-    { "source": "/contactus", "destination": "/contactus/index.html" },
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/blog", "destination": "/blog.html" },
-    { "source": "/case-studies", "destination": "/case-studies.html" },
-    { "source": "/admin", "destination": "/admin.html" },
-    { "source": "/dashboard", "destination": "/dashboard.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
+      "source": "/show",
+      "destination": "/show.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/contactus",
+      "destination": "/contactus/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/case-studies.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/dashboard.html"
     }
   ],
   "redirects": [
     {
       "source": "/home",
       "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/contact",
-      "destination": "/contactus",
-      "permanent": true
+      "permanent": false
     }
   ]
 }
