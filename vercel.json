@@ -3,8 +3,9 @@
     { "source": "/aboutus", "destination": "/aboutus/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/case", "destination": "/case/index.html" },
-    { "source": "/contactus/116", "destination": "/contactus/index?id=116" },
+    { "source": "/contactus", "destination": "/contactus/index.html" },
     { "source": "/", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {}
+    
   ]
 } 

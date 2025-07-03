@@ -38,7 +38,7 @@ export function renderHeader(): string {
       <a href="/case/index?id=113" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Case Studies</a>
       <a href="/aboutus/index?id=114" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">About Us</a>
       <a href="/blog/index?id=115" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Blog</a>
-      <a href="/contactus" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Contact Us</a>
+      <a href="/contactus/index?id=115" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Contact Us</a>
     </div>
 
     <!-- CTA Button (Desktop only) -->
