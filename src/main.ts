@@ -9,6 +9,7 @@ import { maindata2,datalLoaded2 } from './maindata2';
 import { liblog } from './blog';
 import { loginn } from './login';
 import { image ,datalLoaded4} from './mainimage';
+import  lin  from './linko';
 
 Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => {
   console.log('✅ All data loaded');
@@ -64,6 +65,12 @@ if(servo){
   console.log("not able to load")
  }
 // wave.ts end
+
+const dam=document.getElementById("dam");
+if (dam) {
+  dam.innerHTML = lin();
+}
+
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -230,6 +237,8 @@ else if(tittle === ""){
       document.querySelector('meta[name="keywords"]')?.setAttribute('content', title.metakeywords.join(', ') || '');
 
 }}
+
+
 
 });
 
