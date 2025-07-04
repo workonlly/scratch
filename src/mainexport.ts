@@ -29,13 +29,13 @@ if (dropdown) {
 
       return `
         <div class="relative group/item">
-          <a href="/dist/show/show.html?id=${item.id}" class="flex justify-between items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">
+          <a href="/dista/show/show.html?id=${item.id}" class="flex justify-between items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">
             <span>${item.promo}</span>
             ${hasSubItems ? `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>` : ''}
           </a>
           ${hasSubItems ? `
             <div class="absolute top-0 left-full  bg-white shadow-lg rounded-md py-2 w-56 hidden group-hover/item:block">
-              ${subItems.map(subItem => `<a href="/dist/show/show.html?id=${subItem.sid}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">${subItem.promo}</a>`).join("")}
+              ${subItems.map(subItem => `<a href="/dista/show/show.html?id=${subItem.sid}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-black hover:text-white">${subItem.promo}</a>`).join("")}
             </div>
           ` : ''}
         </div>
@@ -51,7 +51,7 @@ if(dropdown2) {
     .map((item) => {
       return `
         <div class="  ">
-          <a  href="/dist/show//show.html?id=${item.id}" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">${item.promo}</a>
+          <a  href="/dista/show//show.html?id=${item.id}" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">${item.promo}</a>
         </div>
       `;
     })
@@ -64,7 +64,7 @@ if(dropdown1) {
     .map((item) => {
       return `
         <div class="  ">
-          <a  href="/dist/show/show.html?id=${item.id}" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">${item.promo}</a>
+          <a  href="/dista/show/show.html?id=${item.id}" class="hover:text-black text-base font-medium inline-block rounded-sm  px-[10px] py-[10px] hover:bg-white">${item.promo}</a>
         </div>
       `;
     })
@@ -83,7 +83,7 @@ if (firstid){
     
    <div class="block bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full">
   
-  <a href="/dist/show/show.html?id=${items.id}" class="flex flex-col items-center gap-4 w-full no-underline">
+  <a href="/dista/show/show.html?id=${items.id}" class="flex flex-col items-center gap-4 w-full no-underline">
     
     <div class="rounded-full h-20 w-20 overflow-hidden">
       <img src="${imo ? imo.imageurl : ''}" alt="" class="object-cover w-full h-full rounded-full">
@@ -116,7 +116,7 @@ if (justid) {
 
     return `
   <div class="bg-white/70 shadow-xl p-4 min-h-[200px] md:w-[90%] m-10 flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black mx-auto">
-  <a href="/dist/show/show.html?id=${items.id}" class="flex flex-col items-center gap-4 w-full no-underline">
+  <a href="/dista/show/show.html?id=${items.id}" class="flex flex-col items-center gap-4 w-full no-underline">
     
     <!-- Top Icon/Image -->
     <div class="rounded-full h-[60px] w-[60px] overflow-hidden">
@@ -134,7 +134,7 @@ if (justid) {
       .map((item) => {
         const ime = image.find((itemr) => itemr.id === item.sid);
         return `
-          <a href="/dist/show/show.html?id=${item.sid}" class="block bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full no-underline">
+          <a href="/dista/show/show.html?id=${item.sid}" class="block bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full no-underline">
             <div class="rounded-full h-[60px] w-[60px] overflow-hidden">
               <img src="${ime ? ime.imageurl : ''}" alt="" class="object-fill rounded-full w-full h-full" />
             </div>
@@ -148,7 +148,7 @@ if (justid) {
   </div>
 
   <!-- Learn More Button for Main Card -->
-  <a href="../show.html?id=${items.id}" class="text-black px-3 py-1 hover:text-white hover:bg-black rounded-full text-sm font-medium mt-4 no-underline">
+  <a href="/dista/show/show.html?id=${items.id}" class="text-black px-3 py-1 hover:text-white hover:bg-black rounded-full text-sm font-medium mt-4 no-underline">
     Learn more →
   </a>
 </div>

@@ -15,11 +15,11 @@ export function renderHeader(): string {
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md z-40 flex flex-col text-center py-4">
       <a href="/?id=111" class="py-2 font-medium hover:bg-black hover:text-white">Home</a>
-      <a href="/dist/services/index?id=112" class="py-2 font-medium hover:bg-black hover:text-white">Services</a>
-      <a href="/dist/case/index?id=113" class="py-2 font-medium hover:bg-black hover:text-white">Case Studies</a>
-      <a href="/dist/aboutus/index?id=114" class="py-2 font-medium hover:bg-black hover:text-white">About Us</a>
-      <a href="/dist/blog/index?id=115" class="py-2 font-medium hover:bg-black hover:text-white">Blog</a>
-      <a href="/dist/contactus/index?id=116" class="py-2 font-medium hover:bg-black hover:text-white">Contact Us</a>
+      <a href="/dista/services/index?id=112" class="py-2 font-medium hover:bg-black hover:text-white">Services</a>
+      <a href="/dista/case/index?id=113" class="py-2 font-medium hover:bg-black hover:text-white">Case Studies</a>
+      <a href="/dista/aboutus/index?id=114" class="py-2 font-medium hover:bg-black hover:text-white">About Us</a>
+      <a href="/dista/blog/index?id=115" class="py-2 font-medium hover:bg-black hover:text-white">Blog</a>
+      <a href="/dista/contactus/index?id=116" class="py-2 font-medium hover:bg-black hover:text-white">Contact Us</a>
       <div class="mt-4 mx-4 bg-black text-white py-2 rounded font-medium">BOOK A CONSULTATION</div>
     </div>
 
@@ -27,7 +27,7 @@ export function renderHeader(): string {
     <div class="hidden md:flex flex-row items-center md:gap-3 ">
       <a href="/?id=111" class="nav-link text-center font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Home</a>
       <div class="relative group">
-        <a href="/dist/services/index?id=112" class="nav-link font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black flex items-center">
+        <a href="/dista/services/index?id=112" class="nav-link font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black flex items-center">
           Services
           <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </a>
@@ -35,15 +35,15 @@ export function renderHeader(): string {
           <!-- Dropdown items will be injected here -->
         </div>
       </div>
-      <a href="/dist/case/index?id=113" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Case Studies</a>
-      <a href="/dist/aboutus/index?id=114" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">About Us</a>
-      <a href="/dist/blog/index?id=115" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Blog</a>
-      <a href="/dist/contactus/index?id=116" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Contact Us</a>
+      <a href="/dista/case/index?id=113" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Case Studies</a>
+      <a href="/dista/aboutus/index?id=114" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">About Us</a>
+      <a href="/dista/blog/index?id=115" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Blog</a>
+      <a href="/dista/contactus/index?id=116" class="nav-link text-base font-medium py-2 px-4 rounded-md hover:text-white hover:bg-black">Contact Us</a>
     </div>
 
     <!-- CTA Button (Desktop only) -->
     <div class="translate-y-[1px] right-5 g-hov w-[50%] sm:w-[30%] md:w-[16%] h-[60%] z-30 g-hov hidden md:block">
-     <a href="/dist/contactus/index.html">
+     <a href="/dista/contactus/index.html">
       <div class="button-1"></div>
       <div class="button-2"></div>
      <div class="button-3 flex justify-center items-center text-sm sm:text-base font-medium text-white">BOOK A CONSULTATION</div>
