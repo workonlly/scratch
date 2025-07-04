@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/dista/services/index", "destination": "/dista/services/index.html" },
+    { "source": "/dista/services/index?id=112", "destination": "/dista/services/index.html" },
     { "source": "/dista/aboutus/index", "destination": "/dista/aboutus/index.html" },
     { "source": "/dista/contactus/index", "destination": "/dista/contactus/index.html" },
     { "source": "/dista/case/index", "destination": "/dista/case/index.html" },
