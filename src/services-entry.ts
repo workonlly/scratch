@@ -1,12 +1,17 @@
 import { renderHeader } from './header';
 import { Footer } from './footer';
 import { Wave } from './wavy';
-import { maindata } from './maindata';
-import { maindata2 } from './maindata2';
-import { image } from './mainimage';
+import { maindata, dataLoaded1 } from './maindata';
+import { maindata2, datalLoaded2 } from './maindata2';
+import { image, datalLoaded4 } from './mainimage';
 import lin from './linko';
 
-Promise.all([]).then(() => {
+Promise.all([dataLoaded1, datalLoaded2, datalLoaded4]).then(() => {
+  console.log('✅ All data loaded for services page');
+  console.log('maindata length:', maindata.length);
+  console.log('maindata2 length:', maindata2.length);
+  console.log('image length:', image.length);
+
   // Mount header
   const mount = document.getElementById('app');
   if (mount) {
@@ -43,9 +48,12 @@ Promise.all([]).then(() => {
   // --- FULL MAPPING LOGIC (from mainexport.ts) ---
   const justid = document.getElementById('just-id');
   if (justid) {
+    console.log('🔍 Starting services mapping...');
     justid.innerHTML = maindata.map((items) => {
       const gg = maindata2.filter((item) => item.id === items.id);
       const imo = image.find((itemr) => itemr.id === items.id);
+      console.log('🔍 Mapping service:', items.promo, 'with', gg.length, 'sub-services');
+      
       return `
   <div class="bg-white/70 shadow-xl p-4 min-h-[200px] md:w-[90%] m-10 flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black mx-auto">
   <a href="/dista/show/show.html?id=${items.id}" class="flex flex-col items-center gap-4 w-full no-underline">
@@ -78,7 +86,12 @@ Promise.all([]).then(() => {
 </div>
     `;
     }).join('');
+    console.log('✅ Services mapping completed');
+  } else {
+    console.log('❌ just-id element not found');
   }
+}).catch(error => {
+  console.error('❌ Error loading data for services page:', error);
 });
 
 // Navigation active state
