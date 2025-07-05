@@ -1,4 +1,3 @@
-
 import { renderHeader } from './header';
 import { Footer } from './footer';
 import Services from './links';
@@ -105,21 +104,18 @@ const container = document.getElementById('service-contain');
 const noly = document.getElementById('text-noly');
 
 if (container && noly && !isNaN(id)) {
-  const serviceee = maindata.find((item) => item.id === id)||maindata2.find((item)=> item.sid==id);
-
+  const serviceee = maindata.find((item) => item.id === id) || maindata2.find((item) => item.sid == id);
   if (serviceee) {
     container.innerHTML = `
       <header class="text-center py-10 space-y-2 bg-[#4361ee]">
         <h2 class="text-3xl font-bold text-white">${serviceee.promo}</h2>
         <h6 class="text-lg  text-white">•&nbsp;${serviceee.keywords}</h6>
       </header>
-
       <section class="px-6 py-12 max-w-5xl mx-auto space-y-4">
         <h3 class="text-2xl font-semibold text-center">${serviceee.secheading}</h3>
         <p class="text-center">${serviceee.secpara}</p>
       </section>
     `;
-
     noly.innerHTML = serviceee.text;
   } else {
     container.innerHTML = `<p class="text-red-500 text-center">Service not found!</p>`;
