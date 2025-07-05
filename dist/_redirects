@@ -1,0 +1,15 @@
+# Redirects for client-side routing
+/contactus    /dista/contactus/index.html   200
+/services     /dista/services/index.html    200
+/aboutus      /dista/aboutus/index.html     200
+/blog         /dista/blog/index.html        200
+/case         /dista/case/index.html        200
+/login        /dista/login/login.html       200
+/admin        /dista/admin/index.html       200
+/show         /dista/show/show.html         200
+
+# Legacy redirects
+/dist/*       /dista/:splat                  301
+
+# Catch all for SPA routing
+/*           /index.html                    200 

@@ -1,0 +1,88 @@
+html, body {
+  width: 100vw !important;
+  min-width: 0 !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+  /* Prevent scrollbars from causing jumps */
+  overscroll-behavior-x: none;
+}
+
+/* Prevent layout shift for all main wrappers */
+body, #app, main, .w-full, .max-w-full, .container, section, header, div {
+  max-width: 100vw !important;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Prevent Swiper/GSAP containers from causing overflow */
+.swiper, .swiper-wrapper {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent fixed-width elements from breaking layout */
+[class*="w-["] {
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
+/* Prevent min-width from breaking layout */
+[class*="min-w-["] {
+  min-width: 0 !important;
+}
+
+/* Prevent absolute/fixed elements from overflowing */
+.absolute, .fixed {
+  max-width: 100vw;
+  overflow-x: auto;
+}
+
+/* Ensure text, links, and images wrap and scale */
+body, .container, .max-w-5xl, .w-full, section, header, div, p, a, span {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
+}
+
+/* Remove excessive padding/margin on mobile */
+@media (max-width: 640px) {
+  section, header, .container, .max-w-5xl, .w-full {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
+  [class*="p-"], [class*="px-"], [class*="py-"], [class*="m-"], [class*="mx-"], [class*="my-"] {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  img, video {
+    max-width: 100vw !important;
+    height: auto !important;
+  }
+  a, span {
+    word-break: break-all;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}

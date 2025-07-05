@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+.animated-gradient-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3f3f3f, #000000);
+  background-size: 400% 400%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  animation: moveGradient 4s ease-out infinite; 
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.dropdown-container {
+  position: relative;
+  align-content: center;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 10;
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 200px;
+}
+
+/* Dropdown item links */
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown-container:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Positioning nested dropdowns */
+.dropdown-menu .dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-container .dropdown-menu {
+  top: 0;
+  left: 100%;
+}
+
+#loader {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}

@@ -1,0 +1,1 @@
+function e(){return[{image_url:"/public/case-study-1.jpg",image_heading:"heading",text:"text"},{image_url:"/public/case-study-1.jpg",image_heading:"heading",text:"text"},{image_url:"/public/case-study-1.jpg",image_heading:"heading",text:"text"},{image_url:"/public/case-study-1.jpg",image_heading:"heading",text:"text"}]}export{e as l};
