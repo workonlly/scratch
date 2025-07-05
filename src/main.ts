@@ -149,17 +149,18 @@ if (divblog) {
 
 
 
-const secondid=document.getElementById("second-id")
+const secondid = document.getElementById("second-id");
 
-if (secondid){
+if (secondid) {
+  const params = new URLSearchParams(window.location.search);
+  const id = Number(params.get("id"));
+  const flexrow = maindata2.filter((item) => item.id == id);
 
-  const flexrow=maindata2.filter((item)=> item.id==id);
-
-  if(flexrow){
-    
-    const vtml=flexrow.map((items)=>{
-      const imo = image.find((itemr) => itemr.id === items.sid);
-      return`
+  if (flexrow) {
+    const vtml = flexrow
+      .map((items) => {
+        const imo = image.find((itemr) => itemr.id === items.sid);
+        return `
 <div class="bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full">
        <div class="rounded-full h-[60px] w-[60px] overflow-hidden">
           <img src="${imo ? imo.imageurl : ""}" alt="" class="object-fill rounded-full w-full h-full" />
@@ -174,9 +175,11 @@ if (secondid){
         Learn more →
       </a>
     </div>
-    `}).join("")
+    `;
+      })
+      .join("");
 
-    secondid.innerHTML=vtml
+    secondid.innerHTML = vtml;
   }
 }
 
