@@ -22,10 +22,10 @@ function copyDir(src, dest) {
 }
 
 // Copy dista folder to dist/dista
-if (fs.existsSync('dista')) {
-  copyDir('dista', 'dist/dista');
-  console.log('✅ Copied dista folder to dist/dista');
-}
+// if (fs.existsSync('dista')) {
+//   copyDir('dista', 'dist/dista');
+//   console.log('✅ Copied dista folder to dist/dista');
+// }
 
 // Copy public folder to dist
 if (fs.existsSync('public')) {
