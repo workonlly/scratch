@@ -1,12 +1,32 @@
 import { renderHeader } from './header';
 import { Footer } from './footer';
 import { Wave } from './wavy';
-import { liblog } from './blog';
 import { dataLoaded1 } from './maindata';
 import { datalLoaded3 } from './maindatakeywords';
 import { datalLoaded2 } from './maindata2';
 import { datalLoaded4 } from './mainimage';
 import lin from './linko';
+
+// Blog data function
+const liblog = () => {
+  return [
+    {
+      image_url: "/public/img/blog1.jpg",
+      image_heading: "Digital Marketing Trends 2024",
+      text: "Discover the latest trends in digital marketing and how they can transform your business strategy."
+    },
+    {
+      image_url: "/public/img/blog2.jpg", 
+      image_heading: "B2B Lead Generation Strategies",
+      text: "Effective strategies for generating high-quality B2B leads in today's competitive market."
+    },
+    {
+      image_url: "/public/img/blog3.jpg",
+      image_heading: "CRM Integration Best Practices",
+      text: "Learn how to integrate CRM systems effectively to streamline your business operations."
+    }
+  ];
+};
 
 Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => {
   console.log('✅ All data loaded for blog page');

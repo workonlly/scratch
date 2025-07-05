@@ -1,14 +1,84 @@
 import { renderHeader } from './header';
 import { Footer } from './footer';
-import Services from './links';
 import { Wave } from './wavy';
 import { maindata ,dataLoaded1 } from './maindata';
 import { mdata,datalLoaded3 } from './maindatakeywords';
 import { maindata2,datalLoaded2 } from './maindata2';
-import { liblog } from './blog';
-import { loginn } from './login';
 import { image ,datalLoaded4} from './mainimage';
 import  lin  from './linko';
+
+// Services function (replacing links.ts)
+const Services = () => {
+  return maindata.map((item) => {
+    const img = image.find((imgItem) => imgItem.id === item.id);
+    return `
+    <div class="bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full">
+      <div class="rounded-full h-[60px] w-[60px] overflow-hidden">
+        <img src="${img ? img.imageurl : ''}" alt="" class="object-fill rounded-full w-full h-full" />
+      </div>
+      <h3 class="text-xl font-semibold text-black">${item.promo}</h3>
+      <p class="text-sm px-2 text-black">${item.heading}</p>
+      <a href="/dista/services/index.html?id=${item.id}" class="text-black px-3 py-1 hover:text-white hover:bg-black rounded-full text-sm font-medium">
+        Learn more →
+      </a>
+    </div>
+  `;
+  }).join("");
+};
+
+// Blog data function
+const liblog = () => {
+  return [
+    {
+      image_url: "/public/img/blog1.jpg",
+      image_heading: "Digital Marketing Trends 2024",
+      text: "Discover the latest trends in digital marketing and how they can transform your business strategy."
+    },
+    {
+      image_url: "/public/img/blog2.jpg", 
+      image_heading: "B2B Lead Generation Strategies",
+      text: "Effective strategies for generating high-quality B2B leads in today's competitive market."
+    },
+    {
+      image_url: "/public/img/blog3.jpg",
+      image_heading: "CRM Integration Best Practices",
+      text: "Learn how to integrate CRM systems effectively to streamline your business operations."
+    }
+  ];
+};
+
+// Login form function
+const loginn = () => {
+  return `
+    <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-md w-full space-y-8">
+        <div>
+          <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            Sign in to your account
+          </h2>
+        </div>
+        <form class="mt-8 space-y-6" action="#" method="POST">
+          <div class="rounded-md shadow-sm -space-y-px">
+            <div>
+              <label for="email-address" class="sr-only">Email address</label>
+              <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Email address">
+            </div>
+            <div>
+              <label for="password" class="sr-only">Password</label>
+              <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Password">
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  `;
+};
 
 Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => {
   console.log('✅ All data loaded');
