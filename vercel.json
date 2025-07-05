@@ -5,7 +5,7 @@
       "destination": "/dista/$1"
     },
     {
-      "source": "/contactus",
+      "source": "/contactus?id=112",
       "destination": "/dista/contactus/index.html"
     },
     {
