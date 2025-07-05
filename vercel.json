@@ -1,0 +1,78 @@
+{
+  "rewrites": [
+    {
+      "source": "/dista/(.*)",
+      "destination": "/dista/$1"
+    },
+    {
+      "source": "/contactus",
+      "destination": "/dista/contactus/index.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/dista/services/index.html"
+    },
+    {
+      "source": "/aboutus",
+      "destination": "/dista/aboutus/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/dista/blog/index.html"
+    },
+    {
+      "source": "/case",
+      "destination": "/dista/case/index.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/dista/login/login.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/dista/admin/index.html"
+    },
+    {
+      "source": "/show",
+      "destination": "/dista/show/show.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/dist/(.*)",
+      "destination": "/dista/$1",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "app/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install"
+} 

@@ -10,7 +10,7 @@ export default function Services():string{
      We empower businesses to thrive in the digital landscape by delivering comprehensive solutions, from virtual marketing to cutting-edge lead generation services.
     </p>
    <div class="w-full flex justify-center  md:mr-[20%] mr-[70%]">
-   <a href="dist/contactus/index.html">
+   <a href="/dista/contactus/index.html">
     <div class="relative g-hov">
     
     <div class="button-1 "></div>

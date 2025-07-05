@@ -176,7 +176,7 @@ if (secondid){
         ${items.heading}
       </p>
 
-      <a href="../show.html?id=${items.sid}" class="text-black px-3 py-1 hover:text-white hover:bg-black rounded-full text-sm font-medium">
+      <a href="/dista/show/show.html?id=${items.sid}" class="text-black px-3 py-1 hover:text-white hover:bg-black rounded-full text-sm font-medium">
         Learn more →
       </a>
     </div>

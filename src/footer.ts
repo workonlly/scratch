@@ -5,21 +5,21 @@ export function Footer(): string{
     
     <!-- Column 1 -->
     <div class="space-y-2 min-w-[150px] flex flex-col">
-      <a href="index"  class=" nav-lin text-base  font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black ">Home</a>
-      <a href="services" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Services</a>
-      <a href="../case/index" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Case Studies</a>
-      <a href="../aboutus/index" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">About us</a>
-      <a href="../blog/index" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Blog</a>
-      <a href="../contactus/index" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Contact Us</a>
+      <a href="/"  class=" nav-lin text-base  font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black ">Home</a>
+      <a href="/dista/services/index.html" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Services</a>
+      <a href="/dista/case/index.html" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Case Studies</a>
+      <a href="/dista/aboutus/index.html" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">About us</a>
+      <a href="/dista/blog/index.html" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Blog</a>
+      <a href="/dista/contactus/index.html" class=" nav-lin text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Contact Us</a>
     </div>
 
     <div id="import2"></div>
 
     <!-- Column 4 -->
     <div class=" nav-lin  space-y-2 min-w-[200px] text-right md:text-left flex flex-col text-left">
-      <a href="index" class=" nav-lin  text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Book A Consultation</a>
-      <a href="index" class=" nav-lin  text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Privacy Policy</a>
-      <a href="index" class=" nav-lin  text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Terms of Service</a>
+      <a href="/dista/contactus/index.html" class=" nav-lin  text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Book A Consultation</a>
+      <a href="/" class=" nav-lin  text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Privacy Policy</a>
+      <a href="/" class=" nav-lin  text-base font-medium py-2 px-4 rounded-md hover:bg-white  hover:text-black">Terms of Service</a>
       <a href="index" class="   text-sm text-white mt-4" class="text-base font-medium py-2 px-4 rounded-md hover:bg-white/70">
         Email: <a href="mailto:info@lacleodigital.com" class="underline">info@lacleodigital.com</a><br>
         WhatsApp: <a href="https://wa.me/917428149253" class="underline">+91-7428149253</a>
