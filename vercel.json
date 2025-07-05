@@ -6,19 +6,19 @@
     },
     {
       "source": "/contactus",
-      "destination": "/dista/contactus/index.html"
+      "destination": "/dist/dista/contactus/index.html"
     },
     {
       "source": "/services",
-      "destination": "/dista/services/index.html"
+      "destination": "/dist/dista/services/index.html"
     },
     {
       "source": "/aboutus",
-      "destination": "/dista/aboutus/index.html"
+      "destination": "/dist/dista/aboutus/index.html"
     },
     {
       "source": "/blog",
-      "destination": "/dista/blog/index.html"
+      "destination": "/dist/dista/blog/index.html"
     },
     {
       "source": "/case",
