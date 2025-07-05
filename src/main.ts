@@ -92,41 +92,39 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const params = new URLSearchParams(window.location.search);
-const id = Number(params.get('id')); // Convert string to number
-
-
-
-
-
-// Show.html
-const container = document.getElementById('service-contain');
-const noly = document.getElementById('text-noly');
-
-if (container && noly && !isNaN(id)) {
-  const serviceee = maindata.find((item) => item.id === id) || maindata2.find((item) => item.sid == id);
-  if (serviceee) {
-    container.innerHTML = `
-      <header class="text-center py-10 space-y-2 bg-[#4361ee]">
-        <h2 class="text-3xl font-bold text-white">${serviceee.promo}</h2>
-        <h6 class="text-lg  text-white">•&nbsp;${serviceee.keywords}</h6>
-      </header>
-      <section class="px-6 py-12 max-w-5xl mx-auto space-y-4">
-        <h3 class="text-2xl font-semibold text-center">${serviceee.secheading}</h3>
-        <p class="text-center">${serviceee.secpara}</p>
-      </section>
-    `;
-    noly.innerHTML = serviceee.text;
+// Show.html mapping logic (robust)
+function renderShowDetail() {
+  const params = new URLSearchParams(window.location.search);
+  const id = Number(params.get('id'));
+  const container = document.getElementById('service-contain');
+  const noly = document.getElementById('text-noly');
+  if (container && noly && !isNaN(id)) {
+    const serviceee = maindata.find((item) => item.id === id) || maindata2.find((item) => item.sid == id);
+    if (serviceee) {
+      container.innerHTML = `
+        <header class="text-center py-10 space-y-2 bg-[#4361ee]">
+          <h2 class="text-3xl font-bold text-white">${serviceee.promo}</h2>
+          <h6 class="text-lg  text-white">•&nbsp;${serviceee.keywords}</h6>
+        </header>
+        <section class="px-6 py-12 max-w-5xl mx-auto space-y-4">
+          <h3 class="text-2xl font-semibold text-center">${serviceee.secheading}</h3>
+          <p class="text-center">${serviceee.secpara}</p>
+        </section>
+      `;
+      noly.innerHTML = serviceee.text;
+      console.log('✅ Mapping/rendering ran for show.html, id:', id);
+    } else {
+      container.innerHTML = `<p class="text-red-500 text-center">Service not found!</p>`;
+      noly.innerHTML = '';
+    }
   } else {
-    container.innerHTML = `<p class="text-red-500 text-center">Service not found!</p>`;
-    noly.innerHTML = '';
+    if (container) container.innerHTML = `<p class="text-red-500 text-center">Invalid service request!</p>`;
+    if (noly) noly.innerHTML = '';
   }
-} else {
-  if (container) container.innerHTML = `<p class="text-red-500 text-center">Invalid service request!</p>`;
-  if (noly) noly.innerHTML = '';
 }
 
-// Show.html end
+// Call the mapping function for show.html
+renderShowDetail();
 
 
 // blog.html
