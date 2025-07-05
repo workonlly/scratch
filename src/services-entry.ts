@@ -10,6 +10,8 @@ import lin from './linko';
 
 Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => {
   console.log('✅ All data loaded for services page');
+  console.log('maindata2 length:', maindata2.length);
+  console.log('image length:', image.length);
 
   // Mount header
   const mount = document.getElementById('app');
@@ -60,15 +62,26 @@ Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => 
   // Services mapping logic
   const secondid = document.getElementById("second-id");
   if (secondid) {
+    console.log('🔍 Starting services mapping...');
+    
     const params = new URLSearchParams(window.location.search);
     const id = Number(params.get("id"));
-    const flexrow = maindata2.filter((item) => item.id == id);
+    console.log('📋 URL ID parameter:', id);
+    
+    if (!isNaN(id)) {
+      console.log('🔍 Searching for services with ID:', id);
+      console.log('🔍 Available maindata2 IDs:', maindata2.map(item => item.id));
+      
+      const flexrow = maindata2.filter((item) => item.id == id);
+      console.log('🔍 Found services:', flexrow.length);
 
-    if (flexrow) {
-      const vtml = flexrow
-        .map((items) => {
-          const imo = image.find((itemr) => itemr.id === items.sid);
-          return `
+      if (flexrow && flexrow.length > 0) {
+        const vtml = flexrow
+          .map((items) => {
+            const imo = image.find((itemr) => itemr.id === items.sid);
+            console.log('🔍 Service item:', items.promo, 'Image found:', !!imo);
+            
+            return `
 <div class="bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full">
        <div class="rounded-full h-[60px] w-[60px] overflow-hidden">
           <img src="${imo ? imo.imageurl : ""}" alt="" class="object-fill rounded-full w-full h-full" />
@@ -84,12 +97,24 @@ Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => 
       </a>
     </div>
     `;
-        })
-        .join("");
+          })
+          .join("");
 
-      secondid.innerHTML = vtml;
+        secondid.innerHTML = vtml;
+        console.log('✅ Services mapping completed for ID:', id);
+      } else {
+        console.log('❌ No services found for ID:', id);
+        secondid.innerHTML = `<p class="text-red-500 text-center">No services found for ID: ${id}</p>`;
+      }
+    } else {
+      console.log('❌ Invalid ID parameter:', id);
+      secondid.innerHTML = `<p class="text-red-500 text-center">Invalid service ID: ${id}</p>`;
     }
+  } else {
+    console.log('❌ second-id element not found');
   }
+}).catch(error => {
+  console.error('❌ Error loading data for services page:', error);
 });
 
 // Navigation active state

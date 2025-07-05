@@ -9,19 +9,40 @@ type mdata={
 }
 export const mdata:mdata[]=[]
 
+// Fallback keywords data in case Supabase fails
+const fallbackKeywords: mdata[] = [
+  {
+    id: 11,
+    title: "Email Append",
+    metakeywords: ["Email Append", "Data Cleansing", "Email Verification", "B2B Outreach"],
+    description: "Reach the Right Contacts with Verified Email Data"
+  },
+  {
+    id: 12,
+    title: "Data Append",
+    metakeywords: ["Data Enhancement", "Customer Profiling", "CRM Accuracy"],
+    description: "Complete Your Customer Records with Accurate Data Append Services"
+  }
+];
+
 export const datalLoaded3 = getData();
 
 async function getData() {
   try {
+    console.log('🔄 Fetching keywords from Supabase...');
     const { data, error } = await supabase.from('maindatakeywords').select('*')
     console.log('Raw data from Supabase:', data)
 
     if (error) {
       console.error('Supabase error:', error)
-      return
+      console.log('⚠️ Using fallback keywords data due to Supabase error');
+      // Use fallback data
+      mdata.length = 0;
+      mdata.push(...fallbackKeywords);
+      return;
     }
 
-    if (data) {
+    if (data && data.length > 0) {
       // Clear existing data first
       mdata.length = 0;
       
@@ -35,10 +56,19 @@ async function getData() {
         });
       });
       
-      console.log('Mapped data length:', mdata.length)
+      console.log('✅ Mapped keywords data length:', mdata.length)
+    } else {
+      console.log('⚠️ No keywords data from Supabase, using fallback data');
+      // Use fallback data
+      mdata.length = 0;
+      mdata.push(...fallbackKeywords);
     }
   } catch (err) {
     console.error('Error fetching data:', err)
+    console.log('⚠️ Using fallback keywords data due to fetch error');
+    // Use fallback data
+    mdata.length = 0;
+    mdata.push(...fallbackKeywords);
   }
 }
 //     {

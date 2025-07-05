@@ -12,20 +12,59 @@ type storm={
 
 export const maindata:storm[]=[];
 
+// Fallback data in case Supabase fails
+const fallbackData: storm[] = [
+  {
+    id: 1,
+    promo: "Data Enrichment",
+    heading: "Enhance Your Data with Comprehensive Enrichment Services",
+    keywords: ["Data Quality", "Customer Insights", "Lead Generation"],
+    secheading: "Transform Raw Data into Actionable Intelligence",
+    secpara: "Data Enrichment is the process of enhancing raw data by adding missing information from external and verified sources. This results in higher accuracy, better segmentation, and more impactful campaigns.",
+    text: `<section class="px-6 py-12 max-w-5xl mx-auto space-y-10 leading-relaxed text-justify">
+      <p>Data Enrichment is the process of enhancing raw data by adding missing information from external and verified sources. This results in higher accuracy, better segmentation, and more impactful campaigns.</p>
+      <section>
+        <h3 class="text-xl font-bold">Why Data Enrichment Matters:</h3>
+        <p>Incomplete or outdated data can lead to poor decision-making, wasted marketing spend, and lost opportunities. Enriched data ensures you always have the most relevant and reliable insights at your fingertips.</p>
+      </section>
+    </section>`
+  },
+  {
+    id: 2,
+    promo: "Digital Marketing",
+    heading: "Boost Brand Visibility with Targeted Digital Marketing",
+    keywords: ["Brand Awareness", "Lead Generation", "Omnichannel Strategies"],
+    secheading: "Transform Your Online Presence with Proven Digital Strategies",
+    secpara: "Digital marketing is the cornerstone of modern business growth. At LaCleo, we help brands establish a powerful online identity, connect with their target audience, and achieve measurable results through a mix of data-driven and creative approaches.",
+    text: `<section class="px-6 py-12 max-w-5xl mx-auto space-y-10 leading-relaxed text-justify">
+      <p>At LaCleo Digital, we offer full-spectrum digital marketing services that are designed to help you stand out in an overcrowded digital world. From SEO and social media to paid ads and analytics, we cover it all under one strategic roof.</p>
+      <section>
+        <h3 class="text-xl font-bold">What is Digital Marketing?</h3>
+        <p>Digital Marketing involves using online platforms, tools, and strategies to promote brands, products, or services. It includes everything from content creation and search engine optimization (SEO) to social media management and email campaigns.</p>
+      </section>
+    </section>`
+  }
+];
+
 // Export a promise that resolves when data is loaded
 export const dataLoaded1 = getData();
 
 async function getData() {
   try {
+    console.log('🔄 Fetching data from Supabase...');
     const { data, error } = await supabase.from('maindata').select('*')
     console.log('Raw data from Supabase:', data)
 
     if (error) {
       console.error('Supabase error:', error)
-      return
+      console.log('⚠️ Using fallback data due to Supabase error');
+      // Use fallback data
+      maindata.length = 0;
+      maindata.push(...fallbackData);
+      return;
     }
 
-    if (data) {
+    if (data && data.length > 0) {
       // Clear existing data first
       maindata.length = 0;
       
@@ -42,13 +81,23 @@ async function getData() {
         });
       });
       
-      console.log('Mapped data length:', maindata.length)
+      console.log('✅ Mapped data length:', maindata.length)
       console.log('First item keywords:', maindata[0]?.keywords)
+    } else {
+      console.log('⚠️ No data from Supabase, using fallback data');
+      // Use fallback data
+      maindata.length = 0;
+      maindata.push(...fallbackData);
     }
   } catch (err) {
     console.error('Error fetching data:', err)
+    console.log('⚠️ Using fallback data due to fetch error');
+    // Use fallback data
+    maindata.length = 0;
+    maindata.push(...fallbackData);
   }
 }
+
 //               Data Enrichment is the process of enhancing raw data by adding missing information from external and verified sources. This results in higher accuracy, better segmentation, and more impactful campaigns.
 //             </p>
 //           </section>
@@ -95,7 +144,7 @@ async function getData() {
 //           <section>
 //             <h3 class="text-xl font-bold">Custom Solutions</h3>
 //             <p>
-//               No two businesses are the same. That’s why we offer custom data enrichment strategies to align with your goals, systems, and scale.
+//               No two businesses are the same. That's why we offer custom data enrichment strategies to align with your goals, systems, and scale.
 //             </p>
 //           </section>
 
@@ -107,9 +156,9 @@ async function getData() {
 //           </section>
 
 //           <section>
-//             <h3 class="text-xl font-bold">Let’s Enrich Your Data Today</h3>
+//             <h3 class="text-xl font-bold">Let's Enrich Your Data Today</h3>
 //             <p>
-//               Don’t let poor data hold you back. Partner with LaCleo to turn your information into insights that drive results.
+//               Don't let poor data hold you back. Partner with LaCleo to turn your information into insights that drive results.
 //             </p>
 //           </section>
 //         </section>`,
@@ -117,7 +166,7 @@ async function getData() {
 //     {
 //   id: 2,
 //   promo: "Digital Marketing",
-//   heading: "“Boost Brand Visibility with Targeted Digital Marketing”",
+//   heading: "Boost Brand Visibility with Targeted Digital Marketing",
 //   keywords: ["Brand Awareness", "Lead Generation", "Omnichannel Strategies"],
 //   secheading: "Transform Your Online Presence with Proven Digital Strategies",
 //   secpara: "Digital marketing is the cornerstone of modern business growth. At LaCleo, we help brands establish a powerful online identity, connect with their target audience, and achieve measurable results through a mix of data-driven and creative approaches.",
@@ -159,7 +208,7 @@ async function getData() {
 //           <section>
 //             <h3 class="text-xl font-bold">Data-Driven Decision Making:</h3>
 //             <p>
-//               Every move we make is backed by analytics. We constantly test, optimize, and refine campaigns based on performance metrics to ensure you’re always ahead.
+//               Every move we make is backed by analytics. We constantly test, optimize, and refine campaigns based on performance metrics to ensure you're always ahead.
 //             </p>
 //           </section>
 
@@ -171,9 +220,9 @@ async function getData() {
 //           </section>
 
 //           <section>
-//             <h3 class="text-xl font-bold">Let’s Build Your Digital Empire</h3>
+//             <h3 class="text-xl font-bold">Let's Build Your Digital Empire</h3>
 //             <p>
-//               Whether you’re a startup or an enterprise, LaCleo is your strategic partner in digital growth. Let us help you make an impact that lasts.
+//               Whether you're a startup or an enterprise, LaCleo is your strategic partner in digital growth. Let us help you make an impact that lasts.
 //             </p>
 //           </section>
 //         </section>`
@@ -182,7 +231,7 @@ async function getData() {
 //     {
 //   id: 3,
 //   promo: "Lead Generation",
-//   heading: "“Fuel Your Sales Pipeline with High-Quality Leads”",
+//   heading: "Fuel Your Sales Pipeline with High-Quality Leads",
 //   keywords: ["Sales Growth", "Targeted Outreach", "B2B/B2C Campaigns"],
 //   secheading: "Accelerate Business Growth with Strategic Lead Generation",
 //   secpara: "At LaCleo, we understand that generating the right leads is the lifeblood of business success. Our lead generation strategies focus on attracting, qualifying, and converting prospects that align with your ideal customer profile—ensuring higher ROI and sales efficiency.",
@@ -192,7 +241,7 @@ async function getData() {
 //           <section>
 //             <h3 class="text-xl font-bold">What is Lead Generation?</h3>
 //             <p>
-//               Lead Generation is the process of attracting and converting strangers and prospects into individuals who have indicated interest in your company’s product or service. This includes collecting contact details and nurturing them through a sales journey.
+//               Lead Generation is the process of attracting and converting strangers and prospects into individuals who have indicated interest in your company's product or service. This includes collecting contact details and nurturing them through a sales journey.
 //             </p>
 //           </section>
 
@@ -243,7 +292,7 @@ async function getData() {
 //           </section>
 
 //           <section>
-//             <h3 class="text-xl font-bold">Let’s Grow Your Pipeline</h3>
+//             <h3 class="text-xl font-bold">Let's Grow Your Pipeline</h3>
 //             <p>
 //               Partner with LaCleo to attract the right prospects, nurture meaningful connections, and convert leads into loyal customers.
 //             </p>
@@ -254,17 +303,17 @@ async function getData() {
 //   {
 //   id: 4,
 //   promo: "Pre-Packed Lists",
-//   heading: "“Jumpstart Outreach with Ready-to-Use Lead Lists”",
+//   heading: "Jumpstart Outreach with Ready-to-Use Lead Lists",
 //   keywords: ["Instant Leads", "Verified Contacts", "Time-Saving Solutions"],
 //   secheading: "Access Ready-Made, Industry-Specific Lead Lists Instantly",
-//   secpara: "LaCleo’s Pre-Packed Lists offer a fast-track to quality outreach. Whether you're launching a campaign or scaling sales, our curated, segmented, and verified contact lists save time, reduce acquisition costs, and get you connected to the right audience immediately.",
+//   secpara: "LaCleo's Pre-Packed Lists offer a fast-track to quality outreach. Whether you're launching a campaign or scaling sales, our curated, segmented, and verified contact lists save time, reduce acquisition costs, and get you connected to the right audience immediately.",
 //   text: `<section class="px-6 py-12 max-w-5xl mx-auto space-y-10 leading-relaxed text-justify">
 //           <p>Speed is everything in sales and marketing. Our Pre-Packed Lists give you the momentum you need to connect with potential clients, partners, or customers without the initial data collection hassle. These lists are built using verified sources, segmented by industry, geography, and buyer intent.</p>
 
 //           <section>
 //             <h3 class="text-xl font-bold">What Are Pre-Packed Lists?</h3>
 //             <p>
-//               Pre-Packed Lists are collections of leads or business contacts that are already curated, verified, and segmented based on your target industry, location, company size, or role. They’re designed to be plug-and-play for immediate use in outreach campaigns.
+//               Pre-Packed Lists are collections of leads or business contacts that are already curated, verified, and segmented based on your target industry, location, company size, or role. They're designed to be plug-and-play for immediate use in outreach campaigns.
 //             </p>
 //           </section>
 
@@ -308,9 +357,9 @@ async function getData() {
 //           </section>
 
 //           <section>
-//             <h3 class="text-xl font-bold">Let’s Skip the Guesswork</h3>
+//             <h3 class="text-xl font-bold">Let's Skip the Guesswork</h3>
 //             <p>
-//               With LaCleo’s Pre-Packed Lists, you can get ahead of the curve and start meaningful conversations today. It’s time to stop searching and start connecting.
+//               With LaCleo's Pre-Packed Lists, you can get ahead of the curve and start meaningful conversations today. It's time to stop searching and start connecting.
 //             </p>
 //           </section>
 //         </section>`
@@ -319,10 +368,10 @@ async function getData() {
 //    {
 //   id: 5,
 //   promo: "E-Commerce Consultancy",
-//   heading: "“Optimize, Scale, and Succeed in E-Commerce”",
+//   heading: "Optimize, Scale, and Succeed in E-Commerce",
 //   keywords: ["Conversion Optimization", "Platform Strategy", "Store Scaling"],
 //   secheading: "Expert Guidance to Build, Grow, and Optimize Your Online Store",
-//   secpara: "Navigating the e-commerce world can be overwhelming, but with LaCleo’s E-Commerce Consultancy, you get the strategic insight, technical expertise, and growth roadmap needed to thrive. Whether you're launching a new store or optimizing an existing one, we’ve got you covered.",
+//   secpara: "Navigating the e-commerce world can be overwhelming, but with LaCleo's E-Commerce Consultancy, you get the strategic insight, technical expertise, and growth roadmap needed to thrive. Whether you're launching a new store or optimizing an existing one, we've got you covered.",
 //   text: `<section class="px-6 py-12 max-w-5xl mx-auto space-y-10 leading-relaxed text-justify">
 //           <p>LaCleo empowers online brands with custom-tailored e-commerce consulting services that drive real results. From choosing the right platform to boosting sales and enhancing user experience, our specialists provide end-to-end support that aligns with your goals.</p>
 
@@ -354,7 +403,7 @@ async function getData() {
 //           <section>
 //             <h3 class="text-xl font-bold">Tailored Roadmaps:</h3>
 //             <p>
-//               We don’t do cookie-cutter. Our experts analyze your current setup, business model, and goals to craft a unique action plan with measurable milestones.
+//               We don't do cookie-cutter. Our experts analyze your current setup, business model, and goals to craft a unique action plan with measurable milestones.
 //             </p>
 //           </section>
 
@@ -368,7 +417,7 @@ async function getData() {
 //           <section>
 //             <h3 class="text-xl font-bold">Trusted by Brands Worldwide:</h3>
 //             <p>
-//               We’ve helped startups and large-scale retailers alike—from fashion and electronics to health and food—achieve remarkable growth with sustainable strategies.
+//               We've helped startups and large-scale retailers alike—from fashion and electronics to health and food—achieve remarkable growth with sustainable strategies.
 //             </p>
 //           </section>
 
@@ -384,17 +433,17 @@ async function getData() {
 //    {
 //   id: 6,
 //   promo: "Digital Experience Testing",
-//   heading: "“Deliver Seamless, Friction-Free Digital Experiences”",
+//   heading: "Deliver Seamless, Friction-Free Digital Experiences",
 //   keywords: ["UX Testing", "Performance Monitoring", "Cross-Platform Consistency"],
 //   secheading: "Ensure Your Digital Products Work Perfectly for Every User, Every Time",
-//   secpara: "LaCleo’s Digital Experience Testing service ensures your website or app delivers consistent, high-quality experiences across all devices, browsers, and user journeys—enhancing satisfaction, retention, and brand trust.",
+//   secpara: "LaCleo's Digital Experience Testing service ensures your website or app delivers consistent, high-quality experiences across all devices, browsers, and user journeys—enhancing satisfaction, retention, and brand trust.",
 //   text: `<section class="px-6 py-12 max-w-5xl mx-auto space-y-10 leading-relaxed text-justify">
 //           <p>Your digital presence is only as strong as the user experience it delivers. LaCleo provides comprehensive Digital Experience Testing to identify performance issues, design flaws, and usability roadblocks before they impact your customers.</p>
 
 //           <section>
 //             <h3 class="text-xl font-bold">What is Digital Experience Testing?</h3>
 //             <p>
-//               It’s the process of evaluating how real users interact with your digital assets—such as websites, mobile apps, and web applications—across devices, environments, and conditions. The goal is to detect friction points that affect conversions, satisfaction, or accessibility.
+//               It's the process of evaluating how real users interact with your digital assets—such as websites, mobile apps, and web applications—across devices, environments, and conditions. The goal is to detect friction points that affect conversions, satisfaction, or accessibility.
 //             </p>
 //           </section>
 
@@ -449,17 +498,17 @@ async function getData() {
 //    {
 //   id: 7,
 //   promo: "Customer Services",
-//   heading: "“Deliver Exceptional Support that Builds Lasting Loyalty”",
+//   heading: "Deliver Exceptional Support that Builds Lasting Loyalty",
 //   keywords: ["Client Retention", "24/7 Assistance", "Omnichannel Support"],
 //   secheading: "Turn Every Customer Interaction into a Brand-Building Opportunity",
-//   secpara: "At LaCleo, we believe that great customer service isn’t just support—it’s a growth engine. Our customer service solutions are tailored to ensure every touchpoint strengthens trust, satisfaction, and loyalty across every channel your customers use.",
+//   secpara: "At LaCleo, we believe that great customer service isn't just support—it's a growth engine. Our customer service solutions are tailored to ensure every touchpoint strengthens trust, satisfaction, and loyalty across every channel your customers use.",
 //   text: `<section class="px-6 py-12 max-w-5xl mx-auto space-y-10 leading-relaxed text-justify">
 //           <p>Exceptional customer service is no longer optional—it's essential for long-term business success. LaCleo provides scalable and personalized customer support solutions that cater to your brand tone, audience expectations, and business model.</p>
 
 //           <section>
 //             <h3 class="text-xl font-bold">What is Modern Customer Service?</h3>
 //             <p>
-//               Today’s customer service goes beyond resolving complaints. It’s about delivering fast, empathetic, and meaningful responses across live chat, email, phone, and social channels—before, during, and after the sale.
+//               Today's customer service goes beyond resolving complaints. It's about delivering fast, empathetic, and meaningful responses across live chat, email, phone, and social channels—before, during, and after the sale.
 //             </p>
 //           </section>
 
@@ -505,7 +554,7 @@ async function getData() {
 //           <section>
 //             <h3 class="text-xl font-bold">Partner with LaCleo</h3>
 //             <p>
-//               Elevate your support strategy with LaCleo and turn your customer service into a strategic advantage. Let’s deliver memorable experiences—one conversation at a time.
+//               Elevate your support strategy with LaCleo and turn your customer service into a strategic advantage. Let's deliver memorable experiences—one conversation at a time.
 //             </p>
 //           </section>
 //         </section>`

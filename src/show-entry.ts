@@ -9,6 +9,8 @@ import lin from './linko';
 
 Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => {
   console.log('✅ All data loaded for show page');
+  console.log('maindata length:', maindata.length);
+  console.log('maindata2 length:', maindata2.length);
 
   // Mount header
   const mount = document.getElementById('app');
@@ -52,13 +54,31 @@ Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => 
 
   // Show.html mapping logic (robust)
   function renderShowDetail() {
+    console.log('🔍 Starting show detail mapping...');
+    
     const params = new URLSearchParams(window.location.search);
     const id = Number(params.get('id'));
+    console.log('📋 URL ID parameter:', id);
+    
     const container = document.getElementById('service-contain');
     const noly = document.getElementById('text-noly');
+    
+    console.log('🔍 DOM elements found:', {
+      container: !!container,
+      noly: !!noly,
+      id: id,
+      isValidId: !isNaN(id)
+    });
+
     if (container && noly && !isNaN(id)) {
+      console.log('🔍 Searching for service with ID:', id);
+      console.log('🔍 Available maindata IDs:', maindata.map(item => item.id));
+      console.log('🔍 Available maindata2 SIDs:', maindata2.map(item => item.sid));
+      
       const serviceee = maindata.find((item) => item.id === id) || maindata2.find((item) => item.sid == id);
+      
       if (serviceee) {
+        console.log('✅ Found service:', serviceee);
         container.innerHTML = `
           <header class="text-center py-10 space-y-2 bg-[#4361ee]">
             <h2 class="text-3xl font-bold text-white">${serviceee.promo}</h2>
@@ -70,19 +90,28 @@ Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => 
           </section>
         `;
         noly.innerHTML = serviceee.text;
-        console.log('✅ Mapping/rendering ran for show.html, id:', id);
+        console.log('✅ Mapping/rendering completed for show.html, id:', id);
       } else {
-        container.innerHTML = `<p class="text-red-500 text-center">Service not found!</p>`;
+        console.log('❌ Service not found for ID:', id);
+        container.innerHTML = `<p class="text-red-500 text-center">Service not found for ID: ${id}</p>`;
         noly.innerHTML = '';
       }
     } else {
-      if (container) container.innerHTML = `<p class="text-red-500 text-center">Invalid service request!</p>`;
+      console.log('❌ Invalid mapping request:', {
+        container: !!container,
+        noly: !!noly,
+        id: id,
+        isValidId: !isNaN(id)
+      });
+      if (container) container.innerHTML = `<p class="text-red-500 text-center">Invalid service request! ID: ${id}</p>`;
       if (noly) noly.innerHTML = '';
     }
   }
 
   // Call the mapping function for show.html
   renderShowDetail();
+}).catch(error => {
+  console.error('❌ Error loading data for show page:', error);
 });
 
 // Navigation active state

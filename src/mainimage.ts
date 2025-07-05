@@ -6,19 +6,38 @@ type image={
 
 export const image:image[]=[]
 
+// Fallback image data in case Supabase fails
+const fallbackImages: image[] = [
+  { id: 11, imageurl: "/public/img/dataenrichment/emailappend.jpg" },
+  { id: 12, imageurl: "/public/img/dataenrichment/dataappend.jpg" },
+  { id: 13, imageurl: "/public/img/dataenrichment/dataverification.jpg" },
+  { id: 14, imageurl: "/public/img/dataenrichment/dataprofiling.jpg" },
+  { id: 15, imageurl: "/public/img/dataenrichment/datacleansing.jpg" },
+  { id: 16, imageurl: "/public/img/digitalmarketing/emailcampaign.jpg" },
+  { id: 17, imageurl: "/public/img/digitalmarketing/linkedincampain.jpg" },
+  { id: 18, imageurl: "/public/img/digitalmarketing/linkedinaccountmanage.jpg" },
+  { id: 19, imageurl: "/public/img/leadgeneration/b2b.jpg" },
+  { id: 20, imageurl: "/public/img/prepackedlist/ceo.jpg" }
+];
+
 export const datalLoaded4 = getData();
 
 async function getData() {
   try {
+    console.log('🔄 Fetching images from Supabase...');
     const { data, error } = await supabase.from('mainimages').select('*')
     console.log('Raw data from Supabase:', data)
 
     if (error) {
       console.error('Supabase error:', error)
-      return
+      console.log('⚠️ Using fallback image data due to Supabase error');
+      // Use fallback data
+      image.length = 0;
+      image.push(...fallbackImages);
+      return;
     }
 
-    if (data) {
+    if (data && data.length > 0) {
       // Clear existing data first
       image.length = 0;
       
@@ -29,10 +48,19 @@ async function getData() {
         });
       });
       
-      console.log('Mapped imagesdata length:', image.length)
+      console.log('✅ Mapped imagesdata length:', image.length)
+    } else {
+      console.log('⚠️ No image data from Supabase, using fallback data');
+      // Use fallback data
+      image.length = 0;
+      image.push(...fallbackImages);
     }
   } catch (err) {
     console.error('Error fetching data:', err)
+    console.log('⚠️ Using fallback image data due to fetch error');
+    // Use fallback data
+    image.length = 0;
+    image.push(...fallbackImages);
   }
 }
 
