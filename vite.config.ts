@@ -15,14 +15,14 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './index.html',
+        show: './dista/show/show.html',
         contactus: './dista/contactus/index.html',
         services: './dista/services/index.html',
         aboutus: './dista/aboutus/index.html',
         blog: './dista/blog/index.html',
         case: './dista/case/index.html',
         login: './dista/login/login.html',
-        admin: './dista/admin/index.html',
-        show: './dista/show/show.html'
+        admin: './dista/admin/index.html'
       }
     }
   },
