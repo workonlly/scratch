@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && node deploy.js",
+    "build": "tsc && vite build && node deploy.cjs",
     "preview": "vite preview",
     "vercel-build": "npm run build"
   },
