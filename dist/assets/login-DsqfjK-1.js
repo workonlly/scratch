@@ -1,4 +1,4 @@
-import{d as l,a as s,b as i}from"./mainimage-g2-cBrXy.js";import{r as c,F as u,W as m,l as f}from"./linko-NB29h-rl.js";import{d as p}from"./maindatakeywords-B6YbvK1q.js";const g=()=>`
+import{d as l,a as s,b as i}from"./mainimage-DmFjaikM.js";import{r as c,F as u,W as m,l as f}from"./linko-NB29h-rl.js";import{d as p}from"./maindatakeywords-DTiOTsIU.js";const g=()=>`
     <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div class="max-w-md w-full space-y-8">
         <div>

@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login</title>
-  <link rel="stylesheet" href="global.css">
-  <script type="module" crossorigin src="/assets/login-DCyPwmnr.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/mainimage-g2-cBrXy.js">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LaCleo Digital</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script type="module" crossorigin src="/assets/login-DsqfjK-1.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/mainimage-DmFjaikM.js">
   <link rel="modulepreload" crossorigin href="/assets/linko-NB29h-rl.js">
-  <link rel="modulepreload" crossorigin href="/assets/maindatakeywords-B6YbvK1q.js">
+  <link rel="modulepreload" crossorigin href="/assets/maindatakeywords-DTiOTsIU.js">
+  <link rel="stylesheet" crossorigin href="/assets/mainimage-D3E5VIYm.css">
 </head>
-<body class="bg-white overflow-x-hidden">
-  <div class="flex items-center justify-center min-h-screen ">
-    <div id="login" class="w-full "></div>
-  </div>
-  <script>
-    function login() {
-      const name=document.getElementById("name").value;
-      const password = document.getElementById("password").value;
-      if (password === "adminlacleo" &&  name === "lacleodigital@gmail.com") {
-        localStorage.setItem("isAdmin", "true");
-        window.location.href = "../admin/admin.html";
-      } else {
-        document.getElementById("error").textContent = "Wrong password!";
-      }
-    }
-  </script>
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <div class="sticky top-2 z-50 opacity-0 transition-all duration-700 ease-out" id="main-content">
+        <div class="w-full flex justify-center px-4">
+            <div id="app" class="w-full transition-all duration-700 ease-out"></div>
+        </div>
+    </div>
+
+    <!-- Login Content -->
+    <div id="login-container"></div>
+
+    <!-- Footer -->
+    <div id="fe"></div>
+
+    <!-- Wave -->
+    <div id="wave"></div>
+
+    <!-- Links -->
+    <div id="dam"></div>
+
 </body>
-</html>
+</html> 

@@ -1,4 +1,4 @@
-import{d as n,a as d,b as i}from"./mainimage-g2-cBrXy.js";import{d as a}from"./maindatakeywords-B6YbvK1q.js";Promise.all([n,d,a,i]).then(()=>{console.log("✅ All data loaded for admin page");const t=document.getElementById("link-clicker"),o=document.getElementById("second-clicked");t&&o&&(t.innerHTML=`
+import{d as n,a as d,b as i}from"./mainimage-DmFjaikM.js";import{d as a}from"./maindatakeywords-DTiOTsIU.js";Promise.all([n,d,a,i]).then(()=>{console.log("✅ All data loaded for admin page");const t=document.getElementById("link-clicker"),o=document.getElementById("second-clicked");t&&o&&(t.innerHTML=`
       <div class="space-y-4">
         <h2 class="text-xl font-bold text-black mb-4">Admin Panel</h2>
         <button onclick="showDashboard()" class="w-full text-left p-2 hover:bg-gray-100 rounded">Dashboard</button>

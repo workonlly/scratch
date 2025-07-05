@@ -1,60 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LaCleo Digital - Digital Marketing Services</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-  // If using GSAP ScrollTrigger
-  if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === "function") {
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        window.ScrollTrigger.refresh();
-      }, 100);
-    });
-  }
-  // If using Swiper
-  if (window.Swiper && typeof window.Swiper.update === "function") {
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.querySelectorAll('.swiper').forEach(swiperEl => {
-          if (swiperEl.swiper) swiperEl.swiper.update();
-        });
-      }, 100);
-    });
-  }
-  // Prevent accidental scroll jump on resize
-  window.addEventListener('resize', () => {
-    document.documentElement.scrollLeft = 0;
-    document.body.scrollLeft = 0;
-  });
-</script>
-  <script type="module" crossorigin src="/assets/show-BoNx0kR3.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/mainimage-g2-cBrXy.js">
-  <link rel="modulepreload" crossorigin href="/assets/gsap-zdca4WM-.js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details - LaCleo Digital</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script type="module" crossorigin src="/assets/show-DgDCS9Ot.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/mainimage-DmFjaikM.js">
   <link rel="modulepreload" crossorigin href="/assets/linko-NB29h-rl.js">
-  <link rel="modulepreload" crossorigin href="/assets/maindatakeywords-B6YbvK1q.js">
-  <link rel="stylesheet" crossorigin href="/assets/style-DQ4QtqkL.css">
+  <link rel="modulepreload" crossorigin href="/assets/maindatakeywords-DTiOTsIU.js">
+  <link rel="stylesheet" crossorigin href="/assets/mainimage-D3E5VIYm.css">
 </head>
-<body class="bg-white overflow-x-hidden">
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <div class="sticky top-2 z-50 opacity-0 transition-all duration-700 ease-out" id="main-content">
+        <div class="w-full flex justify-center px-4">
+            <div id="app" class="w-full transition-all duration-700 ease-out"></div>
+        </div>
+    </div>
 
-  <!-- Header -->
-  <div class="sticky top-0 z-50 bg-white w-full">
-    <div id="app"></div>
-    <div id="service-container"></div>
-  </div>
-  <!-- Header end -->
+    <!-- Service Content -->
+    <div id="service-contain"></div>
+    <div id="text-noly"></div>
 
- 
-  <main class="w-full min-h-screen">
-    <div id="service-contain" class="w-full "></div>
-    <div id="wave" class="w-full"></div>
-    <div id="text-noly" class="w-full px-4"></div>
-    <div id="second-id" class="w-full px-4"></div>
-    <div id="em" class="w-full"></div>
+    <!-- Footer -->
+    <div id="fe"></div>
+
+    <!-- Wave -->
+    <div id="wave"></div>
+
+    <!-- Links -->
     <div id="dam"></div>
-    <div id="fe" class="w-full"></div>
-  </main>
+
 </body>
-</html>
+</html> 
