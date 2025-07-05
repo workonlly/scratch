@@ -13,7 +13,7 @@ import  lin  from './linko';
 Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => {
   console.log('✅ All data loaded');
 
-// header value
+// Mount header on every page
 const mount = document.getElementById('app');
 if (mount) {
   mount.innerHTML = renderHeader();

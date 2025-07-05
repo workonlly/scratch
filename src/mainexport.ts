@@ -4,6 +4,7 @@ import { maindata2,datalLoaded2 } from './maindata2';
 import "./style.css";
 import { image ,datalLoaded4 } from "./mainimage.js";
 import { supabase } from '../supabase.js';
+import { renderHeader } from './header';
 
 declare global {
   interface Window {
@@ -640,4 +641,10 @@ if (second){
 }
 
 });
+
+// Mount header on every page
+const mount = document.getElementById('app');
+if (mount) {
+  mount.innerHTML = renderHeader();
+}
 
