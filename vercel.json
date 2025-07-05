@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/dista/(.*)",
-      "destination": "/dista/$1"
+      "source": "/show",
+      "destination": "/dista/show/show.html"
     },
     {
       "source": "/contactus",
@@ -31,14 +31,6 @@
     {
       "source": "/admin",
       "destination": "/dista/admin/index.html"
-    },
-    {
-      "source": "/show",
-      "destination": "/dista/show/show.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ],
   "redirects": [
