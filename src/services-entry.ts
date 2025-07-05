@@ -107,8 +107,30 @@ Promise.all([dataLoaded1, datalLoaded2, datalLoaded3, datalLoaded4]).then(() => 
         secondid.innerHTML = `<p class="text-red-500 text-center">No services found for ID: ${id}</p>`;
       }
     } else {
-      console.log('❌ Invalid ID parameter:', id);
-      secondid.innerHTML = `<p class="text-red-500 text-center">Invalid service ID: ${id}</p>`;
+      console.log('ℹ️ No ID parameter, showing all services');
+      // Show all services when no ID parameter
+      const allServices = maindata2.map((items) => {
+        const imo = image.find((itemr) => itemr.id === items.sid);
+        return `
+<div class="bg-white/70 shadow-xl p-4 min-h-[200px] flex flex-col items-center text-center gap-4 rounded-2xl hover:scale-105 transition-transform duration-300 hover:border-2 hover:border-black w-full">
+       <div class="rounded-full h-[60px] w-[60px] overflow-hidden">
+          <img src="${imo ? imo.imageurl : ""}" alt="" class="object-fill rounded-full w-full h-full" />
+        </div>
+      <h3 class="text-xl font-semibold text-black"> ${items.promo}</h3>
+
+      <p class="text-sm px-2 text-black">
+        ${items.heading}
+      </p>
+
+      <a href="/dista/show/show.html?id=${items.sid}" class="text-black px-3 py-1 hover:text-white hover:bg-black rounded-full text-sm font-medium">
+        Learn more →
+      </a>
+    </div>
+    `;
+      }).join("");
+      
+      secondid.innerHTML = allServices;
+      console.log('✅ All services displayed');
     }
   } else {
     console.log('❌ second-id element not found');
